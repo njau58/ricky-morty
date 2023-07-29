@@ -1,18 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     extend: {
+      colors: {
+        primary_dark: "#063517",
+        secondary: "#21B6A8",
+        tertiary: "#A3EBB1",
+        primary: "#18A558",
+
+        "secondary-text": "#686868",
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        hero: "url('../../src/assets/images/img-10.jpg')",
+        services: "url('../../src/assets/images/img-6.jpg')",
+        cta: "url('../../src/assets/images/img-10.jpg')",
+        footer: "url('../../src/assets/images/img-2.jpg')",
+
+      
+
       },
     },
   },
   plugins: [],
-}
+};
