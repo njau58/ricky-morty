@@ -10,13 +10,16 @@ import CTA from "../sections/CTA";
 import Projects from "../sections/Projects";
 import ContactUs from "../sections/ContactUs";
 import Footer from "../sections/Footer";
+
 import ScrollToTop from "../components/ScrollToTop";
+
 
 
 const inter = Inter({ subsets: ["latin"], weight: "300" });
 
 export default function Home() {
   return (
+    
     <div className={`h-screen  ${inter.className}`}>
       <ScrollToTop/>
       <NavBar />

@@ -53,6 +53,22 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
+            <Link
+                    href="#about"
+                    onClick={toggleMenuIcon}
+                    scroll={false}
+                    className={
+                      router.asPath == "/#about"
+                        ? `text-primary`
+                        : colorNavChange
+                        ? " text-secondary-text hover:text-primary cursor-pointer"
+                        : `text-white hover:text-primary cursor-pointer`
+                    }
+                  >
+                    About Us
+                  </Link>
+            </li>
+            <li>
               <Link
                 href="#products"
                 className={
@@ -97,8 +113,9 @@ const NavBar = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="#contact"
                 className=" px-6 py-3 bg-primary rounded-md text-sm text-white"
+                scroll={false}
               >
                 Get Started
               </Link>
@@ -142,6 +159,16 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
+                    href="#about"
+                    onClick={toggleMenuIcon}
+                    scroll={false}
+                    className="text-secondary-text  hover:text-primary cursor-pointer"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="#products"
                     className="text-secondary-text  hover:text-primary cursor-pointer"
                     onClick={toggleMenuIcon}
@@ -173,7 +200,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#contact"
                     className=" px-6 py-3 bg-primary rounded-md text-sm text-white"
                     onClick={toggleMenuIcon}
                     scroll={false}
