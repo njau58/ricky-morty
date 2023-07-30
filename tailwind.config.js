@@ -18,7 +18,7 @@ module.exports = {
         "secondary-text": "#686868",
       },
       backgroundImage: {
-        hero: "url('../../src/assets/images/img-10.jpg')",
+        hero: "url('../../src/assets/images/img-11.jpg')",
         services: "url('../../src/assets/images/img-6.jpg')",
         cta: "url('../../src/assets/images/img-10.jpg')",
         footer: "url('../../src/assets/images/img-2.jpg')",

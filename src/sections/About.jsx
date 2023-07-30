@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { img_1,img_2,img_3,img_4,img_5,img_6 } from "../assets";
+import { img_1, img_2, img_3, img_4, img_5, img_6 } from "../assets";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 
@@ -12,25 +12,40 @@ const About = () => {
     >
       <div className="flex flex-col space-y-4">
         <p className="font-extralight text-secondary text-md">ABOUT US</p>
-        <p className={`text-gray-800 font-extrabold text-2xl ${inter.className}`}>Protect Energy</p>
+        <p
+          className={`text-gray-800 font-extrabold text-2xl ${inter.className}`}
+        >
+          Protect Energy
+        </p>
         <p className="text-secondary-text ">
-          Knights Energy is all about professional solar solutions. We are a
-          leader in designing of renewable energy solutions for industrial,
-          commercial, and residential applications, that enable individuals and
-          organizations to be part of a sustainable green energy powered world.
+         Nester Solar is a company that specializes in providing professional
+          solar solutions. They design and install solar panels for industrial,
+          commercial, and residential customers. Knights Energy is committed to
+          providing high-quality solar solutions that are affordable and
+          sustainable. They believe that solar power is a key part of the future
+          of energy, and they are dedicated to helping people and businesses
+          make the switch to solar.
+          
+      
           <br />
           <br />
-          We are committed to providing alternative solutions of the highest
-          standards and also address the energy cost factor by investing in
-          resources and brainpower to achieve these goals. We aim at dispelling
-          over-reliance on expensive and unreliable mainstream energy sources
-          and strive to achieve PV use in daily domestic power generation.
+          Nester Solar is a company that specializes in providing professional
+          solar solutions. They design and install solar panels for industrial,
+          commercial, and residential customers. Knights Energy is committed to
+          providing high-quality solar solutions that are affordable and
+          sustainable. They believe that solar power is a key part of the future
+          of energy, and they are dedicated to helping people and businesses
+          make the switch to solar.
+       
           <br />
           <br />
-          Knights Energy is all about professional solar solutions. We are a
-          leader in designing of renewable energy solutions for industrial,
-          commercial, and residential applications, that enable individuals and
-          organizations to be part of a sustainable green energy powered world.
+          Nester Solar is a company that specializes in providing professional
+          solar solutions. They design and install solar panels for industrial,
+          commercial, and residential customers. Knights Energy is committed to
+          providing high-quality solar solutions that are affordable and
+          sustainable. They believe that solar power is a key part of the future
+          of energy, and they are dedicated to helping people and businesses
+          make the switch to solar.
           
         </p>
         <div className="flex items-start">
@@ -45,20 +60,18 @@ const About = () => {
       </div>
       <div className="flex flex-col space-y-12 w-full">
         <Image
-        src={img_5}
-        alt="nester-solar"
-        height={900}
-        width={600}
-        className="rounded-md hover:scale-105 transition-transform duration-700"
-        
+          src={img_5}
+          alt="nester-solar"
+          height={900}
+          width={600}
+          className="rounded-md hover:scale-105 transition-transform duration-700"
         ></Image>
-         <Image
-        src={img_4}
-        alt="nester-solar"
-        height={900}
-        width={600}
-        className="rounded-md hover:scale-105 transition-transform duration-700"
-        
+        <Image
+          src={img_4}
+          alt="nester-solar"
+          height={900}
+          width={600}
+          className="rounded-md hover:scale-105 transition-transform duration-700"
         ></Image>
       </div>
     </section>
