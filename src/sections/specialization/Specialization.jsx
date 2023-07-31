@@ -32,13 +32,12 @@ const Specialization = () => {
     >
       <div className="flex flex-col items-center space-y-12 ">
       <div className="flex flex-row">
-        <div className="border-4 mr-4 rounded-md  border-secondary"></div>
+        <div className="border-2 mr-4 rounded-md  border-secondary"></div>
       <p
           className={`text-gray-800 font-extrabold text-4xl  max-w-xl ${inter.className}`}
         >
           {" "}
-          We also suggest specialized areas with highly trained teams &
-          technicians in:
+          We specialize in several areas with our highly trained teams of engineers 
         </p>
       </div>
 

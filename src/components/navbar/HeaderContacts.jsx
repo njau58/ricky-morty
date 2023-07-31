@@ -10,12 +10,12 @@ import {
 import Link from "next/link";
 
 const HeaderContact = ({navAbove}) => {
-
+  console.log(navAbove)
   return (
     <div
           className={`${
             !navAbove
-              ? "w-full  z-40 hidden py-4 px-[5%]  fixed top-0 h-14 bg-primary_dark md:flex justify-between items-center"
+              ? "w-full  z-40 py-4 px-[5%]  fixed top-0 h-14 bg-primary_dark md:flex justify-between items-center"
               : "hidden"
           }`}
         >
@@ -25,7 +25,7 @@ const HeaderContact = ({navAbove}) => {
             <Link href="tel: +211928765792">
               {" "}
               <div className="cursor-pointer text-sm pl-2">
-              +2549287657925 
+              +254928765792 
               </div>
             </Link>
             <span className="px-6">|</span>
@@ -37,7 +37,7 @@ const HeaderContact = ({navAbove}) => {
               </div>
             </Link>
           </div>
-          <div className="flex text-white flex-row justify-between items-center ">
+          <div className="hidden md:flex text-white flex-row justify-between items-center ">
             <span className="text-sm mr-4"> Follow Us:</span>
             <div className="flex flex-row  ">
               <FaFacebookF className="mx-4"></FaFacebookF>

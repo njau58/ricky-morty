@@ -38,13 +38,14 @@ const About = () => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
+      viewport={{once:true}}
       
       id="about"
       className="my-32 max-w-7xl md:mx-auto mx-4  flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-12 md:space-y-0 justify-between "
     >
       <motion.div
        variants={aboutVariant} className="flex flex-col space-y-4 ">
-        <p className="font-extralight text-secondary text-md">ABOUT US</p>
+        <p className="font-extralight text-secondary md:text-md text-sm">ABOUT US</p>
         <p
           className={`text-gray-800 font-extrabold text-2xl ${inter.className}`}
         >

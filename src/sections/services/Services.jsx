@@ -1,7 +1,7 @@
 import React from "react";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
-import { img_4, img_3 } from "../../assets";
+import { img_4, img_3,img_11,img_9 } from "../../assets";
 import Service from "./Service";
 
 
@@ -21,7 +21,7 @@ const Services = () => {
     },
     {
       title: "Mini-grids & Off-grid Solar Projects",
-      image: img_3,
+      image: img_11,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
@@ -33,7 +33,7 @@ const Services = () => {
     },
     {
       title: "Solar Water Heating Systems",
-      image: img_4,
+      image: img_9,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
@@ -50,9 +50,9 @@ const Services = () => {
       className="my-32 relative w-full  py-16     bg-services  bg-cover   bg-fixed md:bg-center  mx-auto bg-no-repeat "
     >
       <div className=" relative z-30 flex flex-col space-y-6 justify-center items-center">
-        <p className="font-extralight text-secondary text-md">SERVICES</p>
-        <p className={`text-white font-extrabold text-4xl ${inter.className}`}>
-          Projects for all kinds
+        <p className="font-extralight text-secondary md:text-md text-sm">SERVICES</p>
+        <p className={`text-white font-extrabold text-center  md:text-4xl text-3xl  ${inter.className}`}>
+          Array of our services
         </p>
         <div className="grid md:grid-cols-3 gap-6 grids-col-1 mx-4 max-w-7xl md:mx-auto pt-6">
           {services?.map((service, idx) => {

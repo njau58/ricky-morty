@@ -33,7 +33,7 @@ const NavBar = () => {
         className={`${
           colorNavChange
             ? "top-0 w-full bg-white    fixed shadow-lg z-40 ease-in-out duration-300 "
-            : "bg-transparent top-0 w-full  z-50 md:mt-16   fixed duration-300 ease-in-out  "
+            : "bg-transparent top-0 w-full  z-50 mt-8   fixed duration-300 ease-in-out  "
         } `}
       >
         <div className="flex items-center md:mx-32  justify-between">
@@ -116,7 +116,7 @@ const NavBar = () => {
             <li>
               <Link
                 href="#contact"
-                className=" px-6 py-3 bg-primary rounded-md text-sm text-white"
+                className=" px-6 py-3 bg-primary border border-primary hover:border-primary hover:bg-transparent hover:text-primary rounded-md text-sm text-white"
                 scroll={false}
               >
                 Get a quote

@@ -11,11 +11,11 @@ const CTA = () => {
     >
       <div className=" relative z-30 flex flex-col space-y-6 justify-center items-center">
         <p
-          className={`text-white font-extrabold text-5xl max-w-xl text-center ${inter.className}`}
+          className={`text-white font-extrabold  max-w-xl text-center md:text-5xl text-3xl mx-4   md:text-center  md:max-w-3xl ${inter.className}`}
         >
           We are sure to save on your enery bill by 95%
         </p>
-        <p className="text-center max-w-3xl text-white">
+        <p className="text-center font-thin max-w-3xl mx-4 text-white">
           The electricity bill is one of the items that weighs most on peoples
           pockets. Solar energy is an intelligent alternative to reduce this
           cost. Imagine producing your own energy using our solar systems! You
@@ -23,7 +23,7 @@ const CTA = () => {
         </p>
         <Link
           href="#"
-          className=" px-16 py-3 font-extrabold text-white  bg-primary rounded-md text-sm hover:border hover:border-white hover:bg-transparent "
+          className=" px-16 py-3 font-extrabold border border-primary text-white  bg-primary rounded-md text-sm hover:border hover:border-white hover:bg-transparent "
           scroll={false}
         >
           Contact Us Today

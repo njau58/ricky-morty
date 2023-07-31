@@ -32,7 +32,7 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div class=" bg-white rounded-lg w-full shadow dark:bg-gray-700">
+      <div class=" bg-white rounded-lg w-full shadow ">
         <div class="px-6 py-6 lg:px-8">
         <p className="text-xs text-secondary">CONTACT FORM</p>
 
@@ -42,7 +42,7 @@ const ContactUs = () => {
              
               <input
                 type="text"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 w-full"
                 placeholder="Your name"
                 required
                 name="name"
@@ -52,7 +52,7 @@ const ContactUs = () => {
            
               <input
                 type="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 w-full"
                 placeholder="name@company.com"
                 required
                 name="email"
@@ -62,14 +62,14 @@ const ContactUs = () => {
             
               <input
                 type="text"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "
                 placeholder="2547012345678"
                 required
                 name="phone"
               ></input>
                  <textarea
                 type="text"
-                class="bg-gray-50 border border-gray-300 text-gray-900 mt-4 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                class="bg-gray-50 border border-gray-300 text-gray-900 mt-4 text-sm rounded-lg  block w-full p-2.5 "
                 placeholder="Write you message..."
                 required
                 name="message"
@@ -80,9 +80,9 @@ const ContactUs = () => {
             <button
               type="submit"
               disabled={true}
-              class="w-full text-white bg-primary focus:ring-4 focus:outline-none focus:ring-primary_dark font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="w-full text-white bg-primary focus:ring-4  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center "
             >
-         Send
+         Request a quote
             </button>
           </form>
         </div>

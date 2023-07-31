@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       <section className=" relative w-full h-full bg-primary_dark    bg-hero  bg-cover   bg-fixed md:bg-center  mx-auto bg-no-repeat  ">
-        <motion.div className=" relative z-20 my-auto md:pt-16 h-full ml-12 justify-center md:mx-auto flex text-white items-start flex-col md:items-center space-y-9 md:justify-center">
+        <motion.div className=" relative z-20 my-auto md:pt-16 pt-32  h-full ml-4 md:ml-12 justify-center md:mx-auto flex text-white items-start flex-col md:items-center space-y-9 md:justify-center">
           <motion.p
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
@@ -26,7 +26,7 @@ const Hero = () => {
               type: "spring",
               stiffness: 20,
             }}
-            className="text-sm font-bold"
+            className="text-sm font-bold ml-4 "
           >
             All our energy is generated from renewable sources. We will help you
             to reduce your energy consumption by upto 95%.
@@ -45,7 +45,7 @@ const Hero = () => {
             {" "}
             <Link
               href="#about"
-              className=" px-16 py-3 font-extrabold  bg-primary rounded-md text-sm hover:border hover:border-white hover:bg-transparent "
+              className=" px-16 py-3 font-extrabold border border-primary bg-primary rounded-md text-sm  hover:border-white hover:bg-transparent "
               scroll={false}
             >
               More About Us

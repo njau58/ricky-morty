@@ -10,6 +10,7 @@ import img_7 from "./images/img-7.jpg";
 import img_8 from "./images/img-8.jpg";
 import img_9 from "./images/img-9.jpg";
 import img_10 from "./images/img-10.jpg";
+import img_11 from "./images/img-10.jpg";
 
 export {
   logo,
@@ -22,5 +23,6 @@ export {
   img_7,
   img_8,
   img_10,
+  img_11,
   img_9,
 };

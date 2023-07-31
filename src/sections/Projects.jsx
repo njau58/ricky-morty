@@ -27,9 +27,9 @@ const Projects = () => {
   return (
     <section id="projects" className="my-32  ">
       <div className=" relative z-30 flex flex-col space-y-6 justify-center items-center">
-        <p className="font-extralight text-secondary text-md">PROJECTS</p>
+        <p className="font-extralight text-secondary md:text-md text-sm">PROJECTS</p>
         <p
-          className={`text-text-gray-800 font-extrabold text-4xl    ${inter.className}`}
+          className={`text-text-gray-800 font-extrabold md:text-4xl text-3xl    ${inter.className}`}
         >
           Some of our projects
         </p>
