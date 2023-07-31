@@ -38,11 +38,12 @@ const About = () => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.8 }}
+      
       id="about"
       className="my-32 max-w-7xl md:mx-auto mx-4  flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-12 md:space-y-0 justify-between "
     >
-      <motion.div variants={aboutVariant} className="flex flex-col space-y-4 ">
+      <motion.div
+       variants={aboutVariant} className="flex flex-col space-y-4 ">
         <p className="font-extralight text-secondary text-md">ABOUT US</p>
         <p
           className={`text-gray-800 font-extrabold text-2xl ${inter.className}`}
@@ -86,7 +87,7 @@ const About = () => {
           </Link>
         </div>
       </motion.div>
-      <motion.div  className="flex flex-col space-y-12 w-full">
+      <motion.div   className="flex flex-col space-y-12 w-full">
         <Image
           src={img_5}
           alt="nester-solar"
