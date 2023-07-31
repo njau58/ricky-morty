@@ -5,87 +5,43 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 const Hero = () => {
-  const variant1 = {
-    offscreen: {
-      x: "-100vw",
-    },
-    onscreen: {
-      x: 0,
-
-      transition: {
-        type: "spring",
-
-        duration: 1.5,
-        stiffness: 20,
-      },
-    },
-  };
-  const variant2 = {
-    offscreen: {
-      x: "-100vw",
-    },
-    onscreen: {
-      x: 0,
-
-      transition: {
-        type: "spring",
-
-        duration: 2,
-        stiffness: 20,
-      },
-    },
-  };
-  const variant3 = {
-    offscreen: {
-      x: "-100vw",
-    },
-    onscreen: {
-      x: 0,
-
-      transition: {
-        type: "spring",
-
-        duration: 2.5,
-        stiffness: 20,
-      },
-    },
-  };
-
-
   return (
     <>
       <section className=" relative w-full h-full bg-primary_dark    bg-hero  bg-cover   bg-fixed md:bg-center  mx-auto bg-no-repeat  ">
-        <motion.div
-
-          className=" relative z-20 my-auto md:pt-16 h-full ml-12 justify-center md:mx-auto flex text-white items-start flex-col md:items-center space-y-9 md:justify-center"
-        >
+        <motion.div className=" relative z-20 my-auto md:pt-16 h-full ml-12 justify-center md:mx-auto flex text-white items-start flex-col md:items-center space-y-9 md:justify-center">
           <motion.p
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 1.5, type: "spring", stiffness: 20 }}
-            className={`md:text-5xl text-3xl font-extrabold   text-start md:text-center  md:max-w-3xl ${inter.className}`}
+            className={`md:text-5xl text-2xl font-extrabold ml-4  text-start md:text-center  md:max-w-3xl ${inter.className}`}
           >
             A Clean, Green, and Affordable Way to Power Your Home
           </motion.p>
-          <motion.p   initial={{ x: "-100vw" }}
-              animate={{ x: 0 }}
-              transition={{
-                duration: 1.5,
-                delay: 0.1,
-                type: "spring",
-                stiffness: 20,
-              }} className="text-sm font-bold">
+          <motion.p
+            initial={{ x: "-100vw" }}
+            animate={{ x: 0 }}
+            transition={{
+              duration: 1.5,
+              delay: 0.1,
+              type: "spring",
+              stiffness: 20,
+            }}
+            className="text-sm font-bold"
+          >
             All our energy is generated from renewable sources. We will help you
             to reduce your energy consumption by upto 95%.
           </motion.p>
-          <motion.div    initial={{ x: "-100vw" }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    duration: 1.5,
-                    delay: 0.2,
-                    type: "spring",
-                    stiffness: 20,
-                  }} className="flex flex-col items-center justify-center md:flex-row md:justify-between space-y-6 md:space-y-0 md:space-x-6">
+          <motion.div
+            initial={{ x: "-100vw" }}
+            animate={{ x: 0 }}
+            transition={{
+              duration: 1.5,
+              delay: 0.2,
+              type: "spring",
+              stiffness: 20,
+            }}
+            className="flex flex-col items-center justify-center md:flex-row md:justify-between space-y-6 md:space-y-0 md:space-x-6"
+          >
             {" "}
             <Link
               href="#about"
