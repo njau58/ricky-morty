@@ -13,7 +13,7 @@ const Hero = () => {
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 1.5, type: "spring", stiffness: 20 }}
-            className={`md:text-5xl text-2xl font-extrabold ml-4  text-start md:text-center  md:max-w-3xl ${inter.className}`}
+            className={`md:text-5xl text-3xl font-extrabold ml-4  text-start md:text-center  md:max-w-3xl ${inter.className}`}
           >
             A Clean, Green, and Affordable Way to Power Your Home
           </motion.p>
