@@ -3,50 +3,78 @@ import Image from "next/image";
 import { img_1, img_2, img_3, img_4, img_5, img_6 } from "../assets";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
+import { motion } from "framer-motion";
 
 const About = () => {
+  const aboutVariant = {
+    offscreen: {
+      x: "-100vw",
+    },
+    onscreen: {
+      x: 0,
+
+      transition: {
+        type: "spring",
+        duration: 2,
+     
+      },
+    },
+  };
+  const aboutVariantImages= {
+    offscreen: {
+      x: "100vw",
+    },
+    onscreen: {
+      x: 0,
+
+      transition: {
+        type: "spring",
+        duration: 2,
+      
+      },
+    },
+  };
   return (
-    <section
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.8 }}
       id="about"
       className="my-32 max-w-7xl md:mx-auto mx-4  flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-12 md:space-y-0 justify-between "
     >
-      <div className="flex flex-col space-y-4">
+      <motion.div variants={aboutVariant} className="flex flex-col space-y-4 ">
         <p className="font-extralight text-secondary text-md">ABOUT US</p>
         <p
           className={`text-gray-800 font-extrabold text-2xl ${inter.className}`}
         >
-          Protect Energy
+          Nester Solar
         </p>
         <p className="text-secondary-text ">
-         Nester Solar is a company that specializes in providing professional
-          solar solutions. They design and install solar panels for industrial,
-          commercial, and residential customers. Knights Energy is committed to
-          providing high-quality solar solutions that are affordable and
-          sustainable. They believe that solar power is a key part of the future
-          of energy, and they are dedicated to helping people and businesses
-          make the switch to solar.
-          
-      
+          Nester Solar is a company that specializes in providing professional
+          solar solutions. We design and install solar panels for industrial,
+          commercial, and residential customers. We are committed to providing
+          high-quality solar solutions that are affordable and sustainable. We
+          believe that solar power is a key part of the future of energy, and We
+          are dedicated to helping people and businesses make the switch to
+          solar.
           <br />
           <br />
           Nester Solar is a company that specializes in providing professional
-          solar solutions. They design and install solar panels for industrial,
-          commercial, and residential customers. Knights Energy is committed to
-          providing high-quality solar solutions that are affordable and
-          sustainable. They believe that solar power is a key part of the future
-          of energy, and they are dedicated to helping people and businesses
-          make the switch to solar.
-       
+          solar solutions. We design and install solar panels for industrial,
+          commercial, and residential customers. We are committed to providing
+          high-quality solar solutions that are affordable and sustainable. We
+          believe that solar power is a key part of the future of energy, and We
+          are dedicated to helping people and businesses make the switch to
+          solar.
           <br />
           <br />
           Nester Solar is a company that specializes in providing professional
-          solar solutions. They design and install solar panels for industrial,
-          commercial, and residential customers. Knights Energy is committed to
-          providing high-quality solar solutions that are affordable and
-          sustainable. They believe that solar power is a key part of the future
-          of energy, and they are dedicated to helping people and businesses
-          make the switch to solar.
-          
+          solar solutions. We design and install solar panels for industrial,
+          commercial, and residential customers. We are committed to providing
+          high-quality solar solutions that are affordable and sustainable. We
+          believe that solar power is a key part of the future of energy, and We
+          are dedicated to helping people and businesses make the switch to
+          solar.
         </p>
         <div className="flex items-start">
           <Link
@@ -57,8 +85,8 @@ const About = () => {
             Get in touch
           </Link>
         </div>
-      </div>
-      <div className="flex flex-col space-y-12 w-full">
+      </motion.div>
+      <motion.div  className="flex flex-col space-y-12 w-full">
         <Image
           src={img_5}
           alt="nester-solar"
@@ -73,8 +101,8 @@ const About = () => {
           width={600}
           className="rounded-md hover:scale-105 transition-transform duration-700"
         ></Image>
-      </div>
-    </section>
+      </motion.div>
+    </motion.div>
   );
 };
 

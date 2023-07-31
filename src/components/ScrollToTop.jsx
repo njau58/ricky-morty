@@ -39,9 +39,9 @@ const ScrollToTop = () => {
 
          
             onClick={goToTop}
-            className=" bg-primary bg-opacity-60 z-50 hover:bg-secondary hover:bg-opacity-60  text-white p-2 rounded-full font-bold text-2xl bottom-2 right-2 fixed "
+            className=" bg-primary bg-opacity-60 animate-pulse z-50 hover:bg-secondary hover:bg-opacity-60  text-white p-2 rounded-full font-bold text-2xl bottom-2 right-2 fixed "
           >
-            <FaAngleUp className="font-bold text-xl"></FaAngleUp>
+            <FaAngleUp className="font-bold text-xl "></FaAngleUp>
           </motion.button>
           </AnimatePresence>
             )}

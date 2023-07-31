@@ -12,15 +12,22 @@ import ContactUs from "../sections/ContactUs";
 import Footer from "../sections/Footer";
 
 import ScrollToTop from "../components/ScrollToTop";
+import { motion, useScroll } from "framer-motion";
 
 
 
 const inter = Inter({ subsets: ["latin"], weight: "300" });
 
 export default function Home() {
-  return (
-    
+  
+    const { scrollYProgress } = useScroll();
+  return (<>
+    <motion.div
+    className="fixed top-0 left-0 right-0 h-0.5 z-50 bg-primary origin-[0%]  "
+    style={{ scaleX: scrollYProgress }}
+  />
     <div className={`h-screen  ${inter.className}`}>
+       
       <ScrollToTop/>
       <NavBar />
       <Hero />
@@ -33,6 +40,6 @@ export default function Home() {
       <Projects/>
       <ContactUs/>
       <Footer/>
-    </div>
+    </div></>
   );
 }

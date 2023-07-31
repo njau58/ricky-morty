@@ -24,13 +24,14 @@ const NavBar = () => {
   }, []);
 
   const router = useRouter();
+  
   return (
     <>
       <HeaderContact navAbove={colorNavChange} />
       <nav
         className={`${
           colorNavChange
-            ? "top-0 w-full bg-white    fixed shadow-lg z-50 ease-in-out duration-300 "
+            ? "top-0 w-full bg-white    fixed shadow-lg z-40 ease-in-out duration-300 "
             : "bg-transparent top-0 w-full  z-50 md:mt-16   fixed duration-300 ease-in-out  "
         } `}
       >
@@ -53,20 +54,20 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-            <Link
-                    href="#about"
-                    onClick={toggleMenuIcon}
-                    scroll={false}
-                    className={
-                      router.asPath == "/#about"
-                        ? `text-primary`
-                        : colorNavChange
-                        ? " text-secondary-text hover:text-primary cursor-pointer"
-                        : `text-white hover:text-primary cursor-pointer`
-                    }
-                  >
-                    About Us
-                  </Link>
+              <Link
+                href="#about"
+                onClick={toggleMenuIcon}
+                scroll={false}
+                className={
+                  router.asPath == "/#about"
+                    ? `text-primary`
+                    : colorNavChange
+                    ? " text-secondary-text hover:text-primary cursor-pointer"
+                    : `text-white hover:text-primary cursor-pointer`
+                }
+              >
+                About Us
+              </Link>
             </li>
             <li>
               <Link
@@ -117,7 +118,7 @@ const NavBar = () => {
                 className=" px-6 py-3 bg-primary rounded-md text-sm text-white"
                 scroll={false}
               >
-                Get Started
+                Get a quote
               </Link>
             </li>
           </ul>
@@ -205,7 +206,7 @@ const NavBar = () => {
                     onClick={toggleMenuIcon}
                     scroll={false}
                   >
-                    Get Started
+                    Get a quote
                   </Link>
                 </li>
               </ul>
