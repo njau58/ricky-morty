@@ -15,41 +15,39 @@ import ScrollToTop from "../components/ScrollToTop";
 import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
 
-
-
 const inter = Inter({ subsets: ["latin"], weight: "300" });
 
 export default function Home() {
-  
-    const { scrollYProgress } = useScroll();
-  return (<>
-    <Head>
+  const { scrollYProgress } = useScroll();
+  return (
+    <>
+      <Head>
         <title>Nester Solar </title>
         <meta
           name="description"
           content="The premier provider of solar energy solutions.
     "
         ></meta>
-           <meta name="keywords" content="nester, solar power, lighting, kenya" />
+        <meta name="keywords" content="nester, solar power, lighting, kenya" />
       </Head>
-    <motion.div
-    className="fixed top-0 left-0 right-0 h-0.5 z-50 bg-primary origin-[0%]  "
-    style={{ scaleX: scrollYProgress }}
-  />
-    <div className={`h-screen  ${inter.className}`}>
-       
-      <ScrollToTop/>
-      <NavBar />
-      <Hero />
-      <Features />
-      <About />
-      <Specialization />
-      <Services />
-      <Products />
-      <CTA />
-      <Projects/>
-      <ContactUs/>
-      <Footer/>
-    </div></>
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-0.5 z-50 bg-primary origin-[0%]  "
+        style={{ scaleX: scrollYProgress }}
+      />
+      <div className={`h-screen  ${inter.className}`}>
+        <ScrollToTop />
+        <NavBar />
+        <Hero />
+        <Features />
+        <About />
+        <Specialization />
+        <Services />
+        <Products />
+        <CTA />
+        <Projects />
+        <ContactUs />
+        <Footer />
+      </div>
+    </>
   );
 }
