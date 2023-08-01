@@ -28,7 +28,7 @@ const Specialization = () => {
   return (
     <section
       id="expertise"
-      className="my-32 max-w-7xl md:mx-auto mx-4  flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-12 md:space-y-0 justify-between "
+      className="my-32 max-w-7xl bg-expertise bg-repeat bg-center bg-contain md:mx-auto mx-4  flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-12 md:space-y-0 justify-between "
     >
       <div className="flex flex-col items-center space-y-12 ">
       <div className="flex flex-row">
