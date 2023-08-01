@@ -9,14 +9,14 @@ import useToggle from "../../customHooks/useToggle";
 import MobileMenu from './MobileMenu'
 
 const NavBar = () => {
-  const [colorNavChange, setColorNavchange] = useState(false);
+  const [scrollThreshold, setScrollThreshold] = useState(false);
   const [showMenuIcon, toggleMenuIcon] = useToggle();
 
   const changeNavbarColor = () => {
     if (window.scrollY > 100) {
-      setColorNavchange(true);
+      setScrollThreshold(true);
     } else {
-      setColorNavchange(false);
+      setScrollThreshold(false);
     }
   };
 
@@ -28,16 +28,16 @@ const NavBar = () => {
   
   return (
     <>
-      <HeaderContact navAbove={colorNavChange} />
+      <HeaderContact scrollThreshold={scrollThreshold} />
       <nav
         className={`${
-          colorNavChange
+          scrollThreshold
             ? "top-0 w-full bg-white    fixed shadow-lg z-40 ease-in-out duration-300 "
-            : "bg-transparent top-0 w-full  z-50 mt-8   fixed duration-300 ease-in-out  "
+            : "bg-transparent top-0 w-full  z-50 mt-16   fixed duration-300 ease-in-out  "
         } `}
       >
         <div className="flex items-center md:mx-32  justify-between">
-          <Logo colorNavChange={colorNavChange}></Logo>
+          <Logo scrollThreshold={scrollThreshold}></Logo>
 
           <ul className="font-semibold text-medium hidden md:flex space-x-8">
             <li>
@@ -46,7 +46,7 @@ const NavBar = () => {
                 className={
                   router.asPath == "/"
                     ? `text-primary`
-                    : colorNavChange
+                    : scrollThreshold
                     ? " text-secondary-text hover:text-primary cursor-pointer"
                     : `text-white hover:text-primary cursor-pointer`
                 }
@@ -62,7 +62,7 @@ const NavBar = () => {
                 className={
                   router.asPath == "/#about"
                     ? `text-primary`
-                    : colorNavChange
+                    : scrollThreshold
                     ? " text-secondary-text hover:text-primary cursor-pointer"
                     : `text-white hover:text-primary cursor-pointer`
                 }
@@ -76,7 +76,7 @@ const NavBar = () => {
                 className={
                   router.asPath == "/#products"
                     ? `text-primary`
-                    : colorNavChange
+                    : scrollThreshold
                     ? " text-secondary-text hover:text-primary cursor-pointer"
                     : `text-white hover:text-primary cursor-pointer`
                 }
@@ -90,7 +90,7 @@ const NavBar = () => {
                 className={
                   router.asPath == "/#services"
                     ? `text-primary`
-                    : colorNavChange
+                    : scrollThreshold
                     ? " text-secondary-text hover:text-primary cursor-pointer"
                     : `text-white hover:text-primary cursor-pointer`
                 }
@@ -105,7 +105,7 @@ const NavBar = () => {
                 className={
                   router.asPath == "/#projects"
                     ? `text-primary`
-                    : colorNavChange
+                    : scrollThreshold
                     ? " text-secondary-text hover:text-primary cursor-pointer"
                     : `text-white hover:text-primary cursor-pointer`
                 }
@@ -127,7 +127,7 @@ const NavBar = () => {
           <div
             onClick={toggleMenuIcon}
             className={`${
-              colorNavChange
+              scrollThreshold
                 ? "text-2xl font-sans text-secondary-text font-extrabold  md:hidden mx-4  md:pl-0"
                 : "text-2xl font-sans font-extrabold text-white  md:hidden mx-4  md:pl-0"
             }`}

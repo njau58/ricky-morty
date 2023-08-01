@@ -3,7 +3,11 @@ import { MdOutlineClose } from "react-icons/md";
 
 const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
 
-    console.log(showMenuIcon)
+  const links = [{
+    
+  }]
+
+
   return (
     <div className={`${showMenuIcon ? " md:hidden  " : "hidden"}`}>
       <div className=" top-0 fixed left-0 z-50 flex flex-col w-screen  h-screen bg-white px-32    ">
