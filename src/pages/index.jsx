@@ -11,7 +11,7 @@ import Projects from "../sections/Projects";
 import ContactUs from "../sections/ContactUs";
 import Footer from "../sections/Footer";
 
-import ScrollToTop from "../components/ScrollToTop";
+import ScrollToTop from "../utils/ScrollToTop";
 import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
 
