@@ -1,12 +1,19 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
+import generateLinks from ".";
 
 const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
+  const [mobileLinks, setMobileLinks] = useState([]);
 
-  const links = [{
-    
-  }]
+  useEffect(() => {
+    const getLinks = async () => {
+      const links = await generateLinks({}, {}, toggleMenuIcon);
+      setMobileLinks(links);
+    };
 
+    getLinks();
+  }, [toggleMenuIcon]);
 
   return (
     <div className={`${showMenuIcon ? " md:hidden  " : "hidden"}`}>
@@ -22,67 +29,18 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
         </div>
 
         <ul className=" flex flex-col space-y-12 font-extrabold  items-center justify-center bg-white">
-          <li>
-            <Link
-              href="#"
-              onClick={toggleMenuIcon}
-              scroll={false}
-              className="text-secondary-text  hover:text-primary cursor-pointer"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#about"
-              onClick={toggleMenuIcon}
-              scroll={false}
-              className="text-secondary-text  hover:text-primary cursor-pointer"
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#products"
-              className="text-secondary-text  hover:text-primary cursor-pointer"
-              onClick={toggleMenuIcon}
-              scroll={false}
-            >
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#services"
-              className="text-secondary-text  hover:text-primary cursor-pointer"
-              onClick={toggleMenuIcon}
-              scroll={false}
-            >
-              Services
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="#projects"
-              className="text-secondary-text  hover:text-primary cursor-pointer"
-              onClick={toggleMenuIcon}
-              scroll={false}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#contact"
-              className=" px-6 py-3 bg-primary rounded-md text-sm text-white"
-              onClick={toggleMenuIcon}
-              scroll={false}
-            >
-              Get a quote
-            </Link>
-          </li>
+          {mobileLinks?.map((link, idx) => (
+            <li key={idx}>
+              <Link
+                href={link.href}
+                onClick={toggleMenuIcon}
+                scroll={link.scroll}
+                className={link.mobileStyle}
+              >
+                {link.linkTo}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

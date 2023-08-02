@@ -15,11 +15,11 @@ const HeaderContact = ({ scrollThreshold }) => {
       className={`${
         scrollThreshold
           ? "hidden"
-          : "w-full  z-40 py-4 px-[5%]  fixed top-0 h-14 bg-primary_dark md:flex justify-between items-center"
+          : "w-full  z-40 py-4 px-16 fixed top-0 h-14 bg-primary_dark md:flex justify-between items-center"
       }`}
     >
       {" "}
-      <div className="flex flex-row justify-between items-center text-white ">
+      <div className="flex flex-row  max-w-7xl  justify-between items-center text-white ">
         <AiFillPhone />
         <Link href="tel: +211928765792">
           {" "}
