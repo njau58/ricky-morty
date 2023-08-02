@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { FaAngleUp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
 const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
         setShowTopBtn(true);

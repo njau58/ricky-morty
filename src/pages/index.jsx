@@ -36,6 +36,7 @@ export default function Home() {
       />
       <div className={`h-screen  ${inter.className}`}>
         <ScrollToTop />
+
         <NavBar />
         <Hero />
         <Features />

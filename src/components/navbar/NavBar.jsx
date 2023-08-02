@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useLayoutEffect, useState } from "react";
 import HeaderContact from "./HeaderContacts";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { motion } from "framer-motion";
 import Logo from "../Logo";
 import useToggle from "../../customHooks/useToggle";
 import MobileMenu from "./MobileMenu";
@@ -43,7 +42,7 @@ const NavBar = () => {
         className={`${
           scrollThreshold
             ? "top-0 w-full bg-white fixed shadow-lg z-40 ease-in-out duration-300 "
-            : "bg-transparent top-0 w-full      z-50 mt-16   fixed duration-300 ease-in-out  "
+            : "bg-transparent top-0 w-full      z-40 mt-16   fixed duration-300 ease-in-out  "
         } `}
       >
         <div className="flex items-center md:mx-16  justify-between">
@@ -73,13 +72,11 @@ const NavBar = () => {
           >
             {!showMenuIcon && <GiHamburgerMenu />}
           </div>
-          {/* Mobile Menu */}
-
-          <MobileMenu
-            showMenuIcon={showMenuIcon}
-            toggleMenuIcon={toggleMenuIcon}
-          />
         </div>
+        <MobileMenu
+          showMenuIcon={showMenuIcon}
+          toggleMenuIcon={toggleMenuIcon}
+        />
       </nav>
     </>
   );
