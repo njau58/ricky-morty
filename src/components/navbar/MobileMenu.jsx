@@ -22,7 +22,6 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
           
     <Transition
     show={showMenuIcon}
-    visible={showMenuIcon}
     enter="transition-opacity duration-700"
     enterFrom="opacity-0"
     enterTo="opacity-1"
@@ -30,7 +29,7 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
     leaveFrom="opacity-1"
     leaveTo="opacity-0"
   >
-      <div className=" top-0 fixed left-0 z-50 flex flex-col w-screen  h-screen bg-white px-32    ">
+      <div className=" top-0 md:hidden fixed left-0 z-50 flex flex-col w-screen  h-screen bg-white px-32    ">
         <div className="flex items-center justify-center my-12 ">
           {" "}
           <div

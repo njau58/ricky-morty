@@ -6,7 +6,6 @@ const generateLinks = (router, scrollThreshold, toggleMenuIcon) => {
       href: "/",
       linkTo: "Home",
       onClick: { toggleMenuIcon },
-      scroll: false,
       mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
       className: `
                 ${
