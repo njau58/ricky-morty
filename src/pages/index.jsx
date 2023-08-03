@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Premier provider of solar energy solutions</title>
+        <title>Nester Solar-The Premier provider of solar energy solutions</title>
         <meta
           name="description"
           content="The premier provider of solar energy solutions.
