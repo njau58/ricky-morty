@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nestersolor.co.ke
+
+# Sitemaps
+Sitemap: https://nestersolor.co.ke/sitemap.xml

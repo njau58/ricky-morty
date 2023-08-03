@@ -4,7 +4,10 @@ import { AiFillPhone } from "react-icons/ai";
 
 const ContactUs = () => {
   return (
-    <section id="contact" className="my-32 flex flex-col md:flex-row max-w-7xl space-y-4 md:space-y-0 md:space-x-12 justify-center md:mx-auto mx-4 ">
+    <section
+      id="contact"
+      className="my-32 flex flex-col md:flex-row max-w-7xl space-y-4 md:space-y-0 md:space-x-12 justify-center md:mx-auto mx-4 "
+    >
       <div className="flex flex-col space-y-4 w-full bg-white rounded-md py-12 px-6">
         <p className="text-xs text-secondary">CONTACTS</p>
 
@@ -32,14 +35,13 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div class=" bg-white rounded-lg w-full shadow ">
+      <div class=" bg-white rounded-lg w-full shadow py-6 ">
         <div class="px-6 py-6 lg:px-8">
-        <p className="text-xs text-secondary">CONTACT FORM</p>
+          <p className="text-xs text-secondary">CONTACT FORM</p>
 
-<div className="text-2xl font-extrabold my-6">Request a quote</div> 
+          <div className="text-2xl font-extrabold my-6">Request a quote</div>
           <form class="space-y-6" action="#">
             <div>
-             
               <input
                 type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 w-full"
@@ -49,7 +51,6 @@ const ContactUs = () => {
               ></input>
             </div>
             <div>
-           
               <input
                 type="email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 w-full"
@@ -59,7 +60,6 @@ const ContactUs = () => {
               ></input>
             </div>
             <div>
-            
               <input
                 type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "
@@ -67,14 +67,13 @@ const ContactUs = () => {
                 required
                 name="phone"
               ></input>
-                 <textarea
+              <textarea
                 type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 mt-4 text-sm rounded-lg  block w-full p-2.5 "
-                placeholder="Write you message..."
+                placeholder="Write your message..."
                 required
                 name="message"
               ></textarea>
-
             </div>
 
             <button
@@ -82,7 +81,7 @@ const ContactUs = () => {
               disabled={true}
               class="w-full text-white bg-primary focus:ring-4  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center "
             >
-         Request a quote
+              Request a quote
             </button>
           </form>
         </div>

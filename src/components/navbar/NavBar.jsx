@@ -41,11 +41,11 @@ const NavBar = () => {
       <nav
         className={`${
           scrollThreshold
-            ? "top-0 w-full bg-white fixed shadow-lg z-40 ease-in-out duration-300 "
+            ? "top-0 w-full bg-white fixed shadow-lg z-40 ease-in-out duration-700 "
             : "bg-transparent top-0 w-full      z-40 mt-16   fixed duration-300 ease-in-out  "
         } `}
       >
-        <div className="flex items-center md:mx-16  justify-between">
+        <div className="flex items-center md:mx-16 py-6  justify-between">
           <Logo scrollThreshold={scrollThreshold}></Logo>
 
           <ul className="font-semibold text-medium hidden md:flex space-x-8">

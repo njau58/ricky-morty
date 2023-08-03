@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-footer bg-center bg-fixed bg-no-repeat bg-cover relative">
-        <div className=" flex  z-40 relative flex-col justify-start ml-4 pt-6 max-w-7xl mx-auto  space-y-12 md:space-y-0 md:ml-auto md:flex-row md:justify-between">
+        <div className=" flex  z-30 relative flex-col justify-start ml-4 pt-6 max-w-7xl mx-auto  space-y-12 md:space-y-0 md:ml-auto md:flex-row md:justify-between">
           <div className="flex  flex-col space-y-2 justify-start ">
             <div className="text-slate-50 font-semibold ">Quick Links</div>
 
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
         
-      <div className="relative z-40">
+      <div className="relative z-30">
       <hr className="mt-12 border-secondary-text"></hr>
         <div className="flex flex-row justify-center">
           <div className="text-center text-xs text-slate-100 my-2">

@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const Logo = ({ scrollThreshold }) => {
   return (
-    <div className="relative ml-6 z-50">
+    <div className="relative ml-4 z-50">
       <Link href="/">
         <Image
           src={scrollThreshold ? logo : logo_white}
           alt="Logo"
-          width={100}
-          height={100}
+          width={150}
+          height={120}
           className="text-xs"
           
         ></Image>
