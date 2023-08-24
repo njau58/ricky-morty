@@ -11,6 +11,14 @@ import img_8 from "./images/img-8.jpg";
 import img_9 from "./images/img-9.jpg";
 import img_10 from "./images/img-10.jpg";
 import img_11 from "./images/img-10.jpg";
+import electrical from "./images/electrical.jpg";
+import feasibility from "./images/feasibility.jpg";
+import solar_design from "./images/solar-design.jpg";
+import water_heating from "./images/water-heating.jpg";
+
+import street_lighting from "./images/street-lighting.jpg";
+import water_pumping from "./images/water-pumping.jpg";
+import maintanace from './images/maintance.jpeg'
 
 export {
   logo,
@@ -25,4 +33,12 @@ export {
   img_10,
   img_11,
   img_9,
+  electrical,
+  feasibility,
+  solar_design,
+  maintanace,
+
+  water_heating,
+  water_pumping,
+  street_lighting,
 };

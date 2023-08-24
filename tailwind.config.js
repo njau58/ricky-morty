@@ -20,7 +20,7 @@ module.exports = {
       backgroundImage: {
         hero: "url('../../src/assets/images/img-11.jpg')",
         services: "url('../../src/assets/images/img-6.jpg')",
-        cta: "url('../../src/assets/images/img-10.jpg')",
+        cta: "url('../../src/assets/images/sunrise.jpg')",
         footer: "url('../../src/assets/images/img-2.jpg')",
         expertise: "url('../../src/assets/images/globe.png')",
         

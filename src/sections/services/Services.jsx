@@ -1,45 +1,58 @@
 import React from "react";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
-import { img_4, img_3,img_11,img_9 } from "../../assets";
+import { img_4, img_3,img_11,img_9, solar_design, solor_lighting, water_heating, feasibility, water_pumping, electrical, street_lighting, maintanace,  } from "../../assets";
 import Service from "./Service";
 
 
 const Services = () => {
   const services = [
     {
-      title: "Residential Solar Solutions",
-      image: img_4,
+      title: "SOLAR SYSTEMS SIZING & DESIGNS",
+      image: solar_design,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
     {
-      title: "Commercial & Industrial Solar Solutions",
-      image: img_3,
+      title: "SOLAR STREET LIGHTS",
+      image: street_lighting,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
     {
-      title: "Mini-grids & Off-grid Solar Projects",
-      image: img_11,
+      title: "COMMERCIAL AND MEDIUM SCALE SOLAR SYSTEMS",
+      image: solar_design,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
     {
-      title: "Operation and Maintenance",
-      image: img_4,
+      title: "SOLAR WATER HEATING ",
+      image: water_heating,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
     {
-      title: "Solar Water Heating Systems",
-      image: img_9,
+      title: " FEASIBILITY STUDY ",
+      image: feasibility,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
     {
-      title: "Power Plant Testing and Commissioning",
-      image: img_3,
+      title: " WATER PUMPING",
+      image: water_pumping,
+      description:
+        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
+    },
+    {
+
+      title: " ELECTRICAL INSTALLATION AND MAINTENANCE",
+      image: maintanace,
+      description:
+        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
+    },
+    {
+      title: "  ENERGY AUDITS",
+      image: feasibility,
       description:
         "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
     },
