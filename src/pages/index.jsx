@@ -31,7 +31,7 @@ export default function Home() {
         ></meta>
         <meta name="keywords" content="nester, solar power, lighting, kenya" />
       </Head>
-      {/* <motion.div
+      <motion.div
         className="fixed top-0 left-0 right-0 h-0.5 z-50 bg-primary origin-[0%]  "
         style={{ scaleX: scrollYProgress }}
       />
@@ -49,8 +49,8 @@ export default function Home() {
         <Projects />
         <ContactUs />
         <Footer />
-      </div> */}
-      <ExpiredReview/>
+      </div>
+      {/* <ExpiredReview/> */}
     </>
   );
 }
