@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { img_1, img_2, img_3, img_4, img_5, img_6 } from "../assets";
+import { about1, img_1, img_2, img_3, img_4, img_5, img_6 } from "../assets";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 import { motion } from "framer-motion";
@@ -97,7 +97,7 @@ const About = () => {
           className="rounded-md hover:scale-105 transition-transform duration-700"
         ></Image>
         <Image
-          src={img_4}
+          src={about1}
           alt="nester-solar"
           height={900}
           width={600}

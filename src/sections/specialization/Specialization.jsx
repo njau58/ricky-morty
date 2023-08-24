@@ -2,7 +2,7 @@ import React from "react";
 import { TbHomeBolt } from "react-icons/tb";
 import { GiElectric, GiFlexibleLamp, GiLightBulb } from "react-icons/gi";
 import Image from "next/image";
-import { img_8,img_9,img_10 } from "../../assets";
+import { img_8,img_9,img_10, specialize } from "../../assets";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 const Specialization = () => {
@@ -42,7 +42,7 @@ const Specialization = () => {
       </div>
 
         <Image
-          src={img_10}
+          src={specialize}
           alt="nester-solar"
           height={300}
           width={500}

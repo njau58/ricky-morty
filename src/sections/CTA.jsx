@@ -22,7 +22,7 @@ const CTA = () => {
           can save up to 95% of your electricity bill.
         </p>
         <Link
-          href="#"
+          href="#contact"
           className=" px-16 py-3 font-extrabold border border-primary text-white  bg-primary rounded-md text-sm hover:border hover:border-white hover:bg-transparent "
           scroll={false}
         >
@@ -30,7 +30,7 @@ const CTA = () => {
         </Link>
       </div>
 
-      <div className=" absolute  bg-primary_dark opacity-70 inset-y-0 z-10 w-full h-[100%]   "></div>
+      <div className=" absolute  bg-primary_dark opacity-40 inset-y-0 z-10 w-full h-[100%]   "></div>
     </section>
   );
 };

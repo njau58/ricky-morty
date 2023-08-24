@@ -18,11 +18,16 @@ import water_heating from "./images/water-heating.jpg";
 
 import street_lighting from "./images/street-lighting.jpg";
 import water_pumping from "./images/water-pumping.jpg";
-import maintanace from './images/maintance.jpeg'
+import maintanace from "./images/maintance.jpeg";
+import specialize from "./images/specialize.jpg";
+import about1 from "./images/about1.jpg";
+
+
 
 export {
   logo,
   logo_white,
+  about1,
   img_1,
   img_2,
   img_3,
@@ -37,7 +42,7 @@ export {
   feasibility,
   solar_design,
   maintanace,
-
+  specialize,
   water_heating,
   water_pumping,
   street_lighting,
