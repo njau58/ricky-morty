@@ -15,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 1.5, type: "spring", stiffness: 20 }}
             className={`md:text-5xl text-3xl font-extrabold ml-4  text-start md:text-center  md:max-w-3xl ${inter.className}`}
           >
-            A Clean, Green, and Affordable Way to Power Your Home/Business
+            A Clean, Green & Affordable Way to Power Your Home/Business
           </motion.p>
           <motion.p
             initial={{ x: "-100vw" }}
@@ -26,7 +26,7 @@ const Hero = () => {
               type: "spring",
               stiffness: 20,
             }}
-            className="text-sm font-bold ml-4 "
+            className="text-sm font-bold ml-4 max-w-xl text-center "
           >
             All our energy is generated from renewable sources. We will help you
             to reduce your energy consumption by upto 95%.

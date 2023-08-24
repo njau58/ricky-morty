@@ -21,6 +21,7 @@ import water_pumping from "./images/water-pumping.jpg";
 import maintanace from "./images/maintance.jpeg";
 import specialize from "./images/specialize.jpg";
 import about1 from "./images/about1.jpg";
+import about2 from "./images/about2.jpg";
 
 
 
@@ -28,6 +29,7 @@ export {
   logo,
   logo_white,
   about1,
+  about2,
   img_1,
   img_2,
   img_3,

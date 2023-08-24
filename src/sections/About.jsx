@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { about1, img_1, img_2, img_3, img_4, img_5, img_6 } from "../assets";
+import { about1, about2, img_1, img_2, img_3, img_4, img_5, img_6 } from "../assets";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 import { motion } from "framer-motion";
@@ -61,22 +61,10 @@ const About = () => {
           solar.
           <br />
           <br />
-          Nester Solar is a company that specializes in providing professional
-          solar solutions. We design and install solar panels for industrial,
-          commercial, and residential customers. We are committed to providing
-          high-quality solar solutions that are affordable and sustainable. We
-          believe that solar power is a key part of the future of energy, and We
-          are dedicated to helping people and businesses make the switch to
-          solar.
-          <br />
-          <br />
-          Nester Solar is a company that specializes in providing professional
-          solar solutions. We design and install solar panels for industrial,
-          commercial, and residential customers. We are committed to providing
-          high-quality solar solutions that are affordable and sustainable. We
-          believe that solar power is a key part of the future of energy, and We
-          are dedicated to helping people and businesses make the switch to
-          solar.
+      
+         As a leading solar power contractor in Kenya, we help our customers achieve the benefits of generating their own clean and affordable energy.
+          We offer various products and services, 
+          such as Energy Management Systems, Building Management Systems, Energy Audits and Power Quality Management, Renewable Energy Solutions and Electrical Services.
         </p>
         <div className="flex items-start">
           <Link
@@ -90,7 +78,7 @@ const About = () => {
       </motion.div>
       <motion.div   className="flex flex-col space-y-12 w-full">
         <Image
-          src={img_5}
+          src={about2}
           alt="nester-solar"
           height={900}
           width={600}

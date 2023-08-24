@@ -11,51 +11,44 @@ const Services = () => {
       title: "SOLAR SYSTEMS SIZING & DESIGNS",
       image: solar_design,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+        "Our photovoltaic (PV) power generation systems are made up of interconnected components, each with a specific function. Photovoltaic systems give individuals the ability to become self-sustaining and to control the cost of their electricity. "},
     {
       title: "SOLAR STREET LIGHTS",
       image: street_lighting,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+        "We install engineered systems that include solar LED lights and solar-electric power generation systems which are free from the utility grid. We also install solar powered light system that ties into the utility grid. Our systems are engineered for long-term and reliable performance with little or no maintenance. The systems are designed for a wide range of physical and operating environments and are perfect for rural, suburban and metropolitan areas."},
     {
       title: "COMMERCIAL AND MEDIUM SCALE SOLAR SYSTEMS",
       image: solar_design,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+        "We install commercial solar panels for businesses that want to improve their environmental footprint while reducing costs. We’ve installed commercial solar panels in sectors like agriculture and manufacturing where there is more space. These sectors have larger operations which is able to support a larger number of panels."},
     {
       title: "SOLAR WATER HEATING ",
       image: water_heating,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+       "Solar water heating systems, or 'solar thermal' systems, use free heat from the sun to warm domestic hot water. A conventional boiler or immersion heater can be used to make the water hotter, or to provide hot water when solar energy is unavailable. Heat absorbed by the panels is used to pre-heat the water in a hot water storage cylinder. This reduces the amount of fuel needed to bring the hot water up to a useable temperature, saving money on heating bills and reducing carbon emissions. Producing domestic hot water for showers, baths and hot taps makes up a significant proportion of a household’s energy use."},
     {
       title: " FEASIBILITY STUDY ",
       image: feasibility,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+        "Our solar feasibility study determines whether your property is both technically and financially appropriate for the installation of a solar energy system. It is the first step in the process of transitioning to solar energy and involves the inspection of several important aspects of your potential site. Our team of professionals will perform a thorough inspection and analysis of your property and provide you with a thorough report based on our findings."},
     {
       title: " WATER PUMPING",
       image: water_pumping,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
+       "Our solar water pumping is one of the most efficient ways to utilize solar energy. Instead of using fossil fuels to power your water pump, our solar water pumping harnesses the power of the sun. Conventional energy sources involve either running extended lengths of wire or using a fossil fuel generator at the site.",
     },
     {
 
       title: " ELECTRICAL INSTALLATION AND MAINTENANCE",
       image: maintanace,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+        "We offer a wide range of services that includes electrical wiring, electrical engineering, electricians, and ground testing. We have been providing electrical wiring, electrical engineering, electricians, and ground testing to our commercial & industrial customers with pride since we started our business."},
     {
       title: "  ENERGY AUDITS",
       image: feasibility,
       description:
-        "Our Eco Smart Home System ensures that the solar power you produce is used in the best possible way and - as an option - stored. You can cover an especially large portion of your energy needs and gain greater independence, for example from rising energy costs.",
-    },
+       "In order to help our clients save on energy, Peak solar solutions carries out Energy Audits and Power Quality analysis with the main focus on detecting inefficiencies in energy usage so as to help our clients realize energy savings up to 30%.We provide solutions for poor power factor, unstable voltage supplies, unstable power supply, harmonic distortions, earth leakages, phase balancing etc."},
   ];
   return (
     <section

@@ -48,7 +48,7 @@ const NavBar = () => {
         <div className="flex items-center md:mx-16 py-6  justify-between">
           <Logo scrollThreshold={scrollThreshold}></Logo>
 
-          <ul className="font-semibold text-medium hidden md:flex space-x-8">
+          <ul className=" text-medium hidden md:flex space-x-8">
             {desktopLinks?.map((link, idx) => (
               <li key={idx}>
                 <Link
