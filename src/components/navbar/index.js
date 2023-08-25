@@ -35,23 +35,23 @@ const generateLinks = (router, scrollThreshold, toggleMenuIcon) => {
                    
                 `,
     },
-    {
-      href: "#products",
-      linkTo: "Products",
-      onClick: { toggleMenuIcon },
-      scroll: false,
-      mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
-      className: `
-                    ${
-                      router?.asPath == "/#products"
-                        ? "text-primary"
-                        : scrollThreshold
-                        ? " text-secondary-text hover:text-primary cursor-pointer"
-                        : "text-white hover:text-primary cursor-pointer"
-                    } 
+    // {
+    //   href: "#products",
+    //   linkTo: "Products",
+    //   onClick: { toggleMenuIcon },
+    //   scroll: false,
+    //   mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
+    //   className: `
+    //                 ${
+    //                   router?.asPath == "/#products"
+    //                     ? "text-primary"
+    //                     : scrollThreshold
+    //                     ? " text-secondary-text hover:text-primary cursor-pointer"
+    //                     : "text-white hover:text-primary cursor-pointer"
+    //                 } 
                      
-                  `,
-    },
+    //               `,
+    // },
     {
       href: "#projects",
       linkTo: "Projects",
