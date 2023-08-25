@@ -41,7 +41,7 @@ const ContactUs = () => {
 "
               >
                 {" "}
-                <div className="text-white text-sm text-center  py-2 px-6 w-[15rem] mr-4   bg-primary hover:bg-theme-primary-yellow hover:border-theme-primary-">
+                <div className="text-white text-sm text-center  py-3 px-6 w-[15rem] mr-4 rounded-lg   bg-primary hover:bg-theme-primary-yellow border hover:text-primary hover:border-primary hover:bg-transparent">
                   Whatsapp Chat{" "}
                   <span className="inline-block pl-2">
                     <BsWhatsapp />

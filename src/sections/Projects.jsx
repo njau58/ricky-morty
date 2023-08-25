@@ -34,7 +34,7 @@ const Projects = () => {
         <p
           className={`text-text-gray-800 font-extrabold md:text-4xl text-3xl    ${inter.className}`}
         >
-          Some of our projects
+         Our latest projects
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 grids-col-1 mx-4 max-w-7xl md:mx-auto pt-6">
