@@ -66,13 +66,13 @@ const Specialization = () => {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center   bg-white border border-gray-200 py-12  justify-center  rounded-lg    space-y-4 max-w-lg hover:scale-105 duration-500 cursor-pointer   px-6 "
+              className="flex flex-col items-center   bg-white border border-gray-200 py-12  justify-center  rounded-lg    space-y-4 max-w-lg hover:scale-105 duration-500 cursor-pointer   px-3 "
             >
               <div className="flex items-center justify-center">
                 <div className="text-secondary text-4xl">{exps.Icon}</div>
               </div>
 
-              <p className="text-xl text-center font-semibold text-gray-900 ">
+              <p className="md:text-xl text-lg text-center font-semibold text-gray-900 ">
                 {exps.title}
               </p>
             </div>

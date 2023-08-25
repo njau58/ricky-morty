@@ -22,11 +22,21 @@ import maintanace from "./images/maintance.jpeg";
 import specialize from "./images/specialize.jpg";
 import about1 from "./images/about1.jpg";
 import about2 from "./images/about2.jpg";
+import project1 from './images/project1.jpeg'
+import project2 from './images/project2.jpeg'
+import project3 from './images/project3.jpg'
+import project4 from './images/project4.jpg'
+import farming from './images/farming.jpg'
 
 
 
 export {
   logo,
+  farming,
+  project1,
+   project2,
+   project3, 
+   project4,
   logo_white,
   about1,
   about2,
