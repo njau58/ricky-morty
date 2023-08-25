@@ -13,7 +13,8 @@ import img_10 from "./images/img-10.jpg";
 import img_11 from "./images/img-10.jpg";
 import electrical from "./images/electrical.jpg";
 import feasibility from "./images/feasibility.jpg";
-import solar_design from "./images/solar-design.jpg";
+import solar_design from "./images/design.svg";
+import solar_design1 from "./images/solar-design.jpg";
 import water_heating from "./images/water-heating.jpg";
 
 import street_lighting from "./images/street-lighting.jpg";
@@ -30,7 +31,9 @@ import farming from './images/farming.jpg'
 
 
 
+
 export {
+  solar_design1,
   logo,
   farming,
   project1,
