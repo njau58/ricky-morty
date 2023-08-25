@@ -1,6 +1,9 @@
 import React from "react";
 import { TbHomeBolt } from "react-icons/tb";
 import { GiElectric, GiFlexibleLamp, GiLightBulb } from "react-icons/gi";
+import {BiSolidEdit} from 'react-icons/bi'
+import {SlCalender} from 'react-icons/sl'
+import {IoIosWater} from 'react-icons/io'
 import Image from "next/image";
 import { img_8,img_9,img_10, specialize } from "../../assets";
 import { Inter } from "next/font/google";
@@ -8,20 +11,29 @@ const inter = Inter({ subsets: ["latin"], weight: "700" });
 const Specialization = () => {
   const expertise = [
     {
-      Icon: <TbHomeBolt />,
-      title: "Residencial Electrical Automation",
+      Icon: <BiSolidEdit />,
+      title: "Energy Audits & Power Quality Management",
     },
     {
-      Icon: <GiFlexibleLamp />,
-      title: "Residencial Electrical Automation",
+      Icon: <TbHomeBolt />,
+      title: " Electrical Installation and Maintanance",
+    },
+    {
+      Icon: <SlCalender />,
+      title: "Feasibility Study ",
+    },
+ 
+    {
+      Icon: <GiLightBulb />,
+      title: "Solar Water Heating",
+    },
+    {
+      Icon: <IoIosWater />,
+      title: "Solar Water Pumping",
     },
     {
       Icon: <GiElectric />,
-      title: "Residencial Electrical Automation",
-    },
-    {
-      Icon: <GiLightBulb />,
-      title: "Residencial Electrical Automation",
+      title: "Solar Systems Sizing & Designs",
     },
   ];
 
@@ -49,12 +61,12 @@ const Specialization = () => {
           className="rounded-md hover:scale-105 transition-transform duration-700"
         ></Image>
       </div>
-      <div className="grid grid-cols-2 gap-4  bg-expertise bg-no-repeat bg-center bg-contain pt-32  ">
+      <div className="grid grid-cols-2 gap-4  bg-expertise bg-no-repeat bg-center bg-contain pt-12  ">
         {expertise?.map((exps, idx) => {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center   bg-white border border-gray-200 py-4  justify-center  rounded-lg    space-y-4 max-w-lg hover:scale-105 duration-500 cursor-pointer   px-12 "
+              className="flex flex-col items-center   bg-white border border-gray-200 py-12  justify-center  rounded-lg    space-y-4 max-w-lg hover:scale-105 duration-500 cursor-pointer   px-6 "
             >
               <div className="flex items-center justify-center">
                 <div className="text-secondary text-4xl">{exps.Icon}</div>

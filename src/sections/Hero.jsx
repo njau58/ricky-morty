@@ -26,7 +26,7 @@ const Hero = () => {
               type: "spring",
               stiffness: 20,
             }}
-            className="text-sm font-bold ml-4 max-w-xl text-center "
+            className="text-sm font-bold ml-4 max-w-xl md:text-center "
           >
             All our energy is generated from renewable sources. We will help you
             to reduce your energy consumption by upto 95%.

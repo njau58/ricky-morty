@@ -10,6 +10,7 @@ import CTA from "../sections/CTA";
 import Projects from "../sections/Projects";
 import ContactUs from "../sections/ContactUs";
 import Footer from "../sections/Footer";
+import Statistics from '../sections/statistics/Statistics'
 
 import ScrollToTop from "../utils/ScrollToTop";
 import { motion, useScroll } from "framer-motion";
@@ -44,8 +45,9 @@ export default function Home() {
         <About />
         <Specialization />
         <Services />
-        <Products />
+        {/* <Products /> */}
         <CTA />
+        <Statistics/>
         <Projects />
         <ContactUs />
         <Footer />
