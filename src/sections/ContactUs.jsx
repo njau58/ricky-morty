@@ -1,6 +1,8 @@
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
 import { AiFillPhone } from "react-icons/ai";
+import Link from "next/link";
+import {BsWhatsapp} from 'react-icons/bs'
 
 const ContactUs = () => {
   return (
@@ -19,7 +21,7 @@ const ContactUs = () => {
           <div className="text-xl text-secondary">
             <AiFillPhone />
           </div>
-          <div className="text-sm">+25471234567</div>
+          <div className="text-sm">+254724045142 / +254723716718</div>
         </div>
         <div className="flex flex-row space-x-4 items-center">
           <div className="text-xl text-secondary">
@@ -33,6 +35,19 @@ const ContactUs = () => {
           </div>
           <div className="text-sm">info@nestersolar.co.ke</div>
         </div>
+        <Link 
+              target="_blank"
+                href="https://wa.me/+254724045142 
+"
+              >
+                {" "}
+                <div className="text-white text-sm text-center  py-2 px-6 w-[15rem] mr-4   bg-primary hover:bg-theme-primary-yellow hover:border-theme-primary-">
+                  Whatsapp Chat{" "}
+                  <span className="inline-block pl-2">
+                    <BsWhatsapp />
+                  </span>
+                </div>
+              </Link>
       </div>
 
       <div class=" bg-white rounded-lg w-full shadow py-6 ">

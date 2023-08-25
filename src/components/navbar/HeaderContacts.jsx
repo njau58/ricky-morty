@@ -21,13 +21,13 @@ const HeaderContact = ({ scrollThreshold }) => {
       {" "}
       <div className="flex flex-row  max-w-7xl  justify-between items-center text-white ">
         <AiFillPhone />
-        <Link href="tel: +211928765792">
+        <Link href="tel:+254724045142 ">
           {" "}
-          <div className="cursor-pointer md:text-sm  pl-2 text-xs">+254928765792</div>
+          <div className="cursor-pointer md:text-sm  pl-2 text-xs">+254724045142 / +254723716718 </div>
         </Link>
         <span className="px-6">|</span>
         <MdEmail />
-        <Link href="mailto:querries@apexsurveyors.com.ssd">
+        <Link href="mailto:info@nestersolar.co.ke">
           {" "}
           <div className="cursor-pointer md:text-sm pl-2 text-xs ">
             info@nestersolar.co.ke

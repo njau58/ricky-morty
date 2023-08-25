@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="flex flex-row  items-center">
               <MdEmail className="text-white text-lg mr-2" />
               <div className="text-white text-xs font-normal">
-                <Link href="mailto:queries@apexsurveyors.com.ss">
+                <Link href="mailto:info@nestersolar.co.ke">
                   {" "}
                   info@nestersolar.co.ke
                 </Link>
@@ -64,10 +64,10 @@ const Footer = () => {
               <div className="text-white text-xs font-normal cursor-pointer">
                 {" "}
                 <Link
-                  href="tel:+211928765792 
+                  href="tel:+254724045142 
                 "
                 >
-                  +2547849940300 / +25498965792
+              +254724045142 / +254723716718 
 
               
                 </Link>
