@@ -10,12 +10,11 @@ import CTA from "../sections/CTA";
 import Projects from "../sections/Projects";
 import ContactUs from "../sections/ContactUs";
 import Footer from "../sections/Footer";
-import Statistics from '../sections/statistics/Statistics'
+import Statistics from "../sections/statistics/Statistics";
 
 import ScrollToTop from "../utils/ScrollToTop";
 import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
-
 
 const inter = Inter({ subsets: ["latin"], weight: "300" });
 
@@ -47,7 +46,7 @@ export default function Home() {
         <Services />
         {/* <Products /> */}
         <CTA />
-        <Statistics/>
+        <Statistics />
         <Projects />
         <ContactUs />
         <Footer />
