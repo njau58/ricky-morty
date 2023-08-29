@@ -27,7 +27,7 @@ export default function Home() {
         <title>Nester Solar-Solar energy solutions</title>
         <meta
           name="description"
-          content="The premier provider of solar energy solutions.
+          content="Provider of solar energy solutions in East Africa.
     "
         ></meta>
         <meta name="keywords" content="nester, solar power, lighting, kenya" />

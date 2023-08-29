@@ -31,7 +31,7 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
     leaveFrom="opacity-1"
     leaveTo="opacity-0"
   >
-      <div className=" top-0 md:hidden fixed left-0 z-50 flex flex-col w-screen  h-screen bg-white px-32    ">
+      <div className=" top-0 md:hidden fixed left-0 z-50 flex flex-col w-screen  h-screen bg-white px-4    ">
         <div className="flex items-center justify-center my-12 ">
           {" "}
           <div
@@ -56,7 +56,7 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
             </li>
           ))}
         </ul>
-        <div className="flex flex-row items-center text-primary justify-center mt-12">
+        <div className="flex flex-row text-xl items-center text-primary justify-center mt-12">
         <Link className="hover:text-secondary" href="https://www.facebook.com/profile.php?id=61550654645047">
         <FaFacebookF className="mx-4"/>
         </Link> 
