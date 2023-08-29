@@ -15,23 +15,18 @@ const Footer = () => {
             <div className="text-slate-50 font-semibold ">Quick Links</div>
 
             <div className="flex flex-col space-y-3 text-xs font-normal ">
+            <Link href="#about" scroll={false}>
+                <div className=" text-white   hover:underline p-[4px] ">
+                  About
+                </div>
+              </Link>
               <Link href="#services" scroll={false}>
                 <div className=" text-white   hover:underline p-[4px] ">
                   Services
                 </div>
               </Link>
 
-              <Link href="#about" scroll={false}>
-                <div className=" text-white   hover:underline p-[4px] ">
-                  About
-                </div>
-              </Link>
-
-              <Link href="#products" scroll={false}>
-                <div className=" text-white   hover:underline p-[4px] ">
-                  Products
-                </div>
-              </Link>
+            
 
               <Link href="#projects" scroll={false}>
                 <div className=" text-white   hover:underline p-[4px] ">
@@ -67,9 +62,7 @@ const Footer = () => {
                   href="tel:+254724045142 
                 "
                 >
-              +254724045142 / +254723716718 
-
-              
+                  +254724045142 / +254723716718
                 </Link>
               </div>
             </div>
@@ -77,31 +70,27 @@ const Footer = () => {
 
           <div className="flex justify-start items-center">
             <div className=" w-[9rem]">
-              <Image
-                src={logo_white}
-                alt="log"
-            
-              ></Image>
+              <Image src={logo_white} alt="log"></Image>
             </div>
           </div>
         </div>
-        
-      <div className="relative z-30">
-      <hr className="mt-12 border-secondary-text"></hr>
-        <div className="flex flex-row justify-center">
-          <div className="text-center text-xs text-slate-100 my-2">
-            &copy; {new Date().getFullYear()} Nester Solar. Designed by{" "}
-            <Link
-              href="https://softleafapplications.com"
-              target="_blank"
-              className="text-primary inline-block "
-            >
-              {" "}
-              <div> SoftLeaf Applications</div>
-            </Link>
+
+        <div className="relative z-30">
+          <hr className="mt-12 border-secondary-text"></hr>
+          <div className="flex flex-row justify-center">
+            <div className="text-center text-xs text-slate-100 my-2">
+              &copy; {new Date().getFullYear()} Nester Solar. Designed by{" "}
+              <Link
+                href="https://softleafapplications.com"
+                target="_blank"
+                className="text-primary inline-block "
+              >
+                {" "}
+                <div> SoftLeaf Applications</div>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
         <div className=" top-0 absolute w-full h-full bg-primary_dark bg-opacity-90"></div>
       </footer>
     </>

@@ -46,7 +46,7 @@ const Specialization = () => {
       <div className="flex flex-row">
         <div className="border-2 mr-4 rounded-md  border-secondary"></div>
       <p
-          className={`text-gray-800 font-extrabold text-4xl  max-w-xl ${inter.className}`}
+          className={`text-gray-800 font-extrabold text-2xl md:text-4xl  max-w-xl ${inter.className}`}
         >
           {" "}
           We specialize in several areas with our highly trained teams of engineers 

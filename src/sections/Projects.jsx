@@ -17,12 +17,13 @@ import {
 } from "../assets";
 const Projects = () => {
   const nesterProjects = [
+    project4,
+    project5,
     about1,
     project1,
     project2,
     project3,
-    project4,
-    project5,
+  
     project6,
     project7,
     maintanace,
