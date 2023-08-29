@@ -11,18 +11,21 @@ import {
   maintanace,
   farming,
   water_heating,
+  project5,
+  project6,
+  project7,
 } from "../assets";
 const Projects = () => {
   const nesterProjects = [
     about1,
-    about2,
     project1,
     project2,
     project3,
     project4,
+    project5,
+    project6,
+    project7,
     maintanace,
-    farming,water_heating
-    
   ];
 
   return (
@@ -34,18 +37,19 @@ const Projects = () => {
         <p
           className={`text-text-gray-800 font-extrabold md:text-4xl text-3xl    ${inter.className}`}
         >
-         Our latest projects
+          Our latest projects
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 grids-col-1 mx-4 max-w-7xl md:mx-auto pt-6">
           {nesterProjects.map((project, idx) => {
             return (
-              <Image
-                key={idx}
-                src={project}
-                alt="project"
-                className="rounded-md w-full h-full"
-              ></Image>
+              <div key={idx} className="h-56">
+                <Image
+                  src={project}
+                  alt="project"
+                  className="rounded-md w-full h-full object-cover"
+                ></Image>
+              </div>
             );
           })}
         </div>

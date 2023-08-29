@@ -37,10 +37,14 @@ const HeaderContact = ({ scrollThreshold }) => {
       <div className="hidden md:flex text-white flex-row justify-between items-center ">
         <span className="text-sm mr-4"> Follow Us:</span>
         <div className="flex flex-row  ">
-          <FaFacebookF className="mx-4"></FaFacebookF>
-          <AiOutlineInstagram />
-          <AiOutlineTwitter className="mx-4" />
-          <AiFillLinkedin />
+        <Link className="hover:text-secondary" href="https://www.facebook.com/profile.php?id=61550654645047">
+        <FaFacebookF className="mx-4"/>
+        </Link> 
+          {/* <AiOutlineInstagram />
+          <AiOutlineTwitter className="mx-4" /> */}
+        <Link className="hover:text-secondary" href="https://www.linkedin.com/company/nester-solar/">
+        <AiFillLinkedin />
+        </Link> 
         </div>
       </div>
     </div>

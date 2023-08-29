@@ -9,6 +9,7 @@ import {
   street_lighting,
   maintanace,
   solar_design1,
+  energy_audits,
 } from "../../assets";
 import Service from "./Service";
 
@@ -65,7 +66,7 @@ const Services = () => {
     },
     {
       title: "  Energy Audits",
-      image: feasibility,
+      image: energy_audits,
          customStyle:false,
       description:
         "In order to help our clients save on energy, Peak solar solutions carries out Energy Audits and Power Quality analysis with the main focus on detecting inefficiencies in energy usage so as to help our clients realize energy savings up to 30%.We provide solutions for poor power factor, unstable voltage supplies, unstable power supply, harmonic distortions, earth leakages, phase balancing etc.",
