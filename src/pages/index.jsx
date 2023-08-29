@@ -15,7 +15,7 @@ import Statistics from '../sections/statistics/Statistics'
 import ScrollToTop from "../utils/ScrollToTop";
 import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
-import ExpiredReview from "../components/ExpiredReview";
+
 
 const inter = Inter({ subsets: ["latin"], weight: "300" });
 
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nester Solar-The Premier provider of solar energy solutions</title>
+        <title>Nester Solar-Solar energy solutions</title>
         <meta
           name="description"
           content="The premier provider of solar energy solutions.

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import generateLinks from ".";
 import { Transition } from "@headlessui/react";
+import {AiFillLinkedin } from 'react-icons/ai'
+import {FaFacebookF } from 'react-icons/fa'
 
 const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
   const [mobileLinks, setMobileLinks] = useState([]);
@@ -54,6 +56,16 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
             </li>
           ))}
         </ul>
+        <div className="flex flex-row items-center text-primary justify-center mt-12">
+        <Link className="hover:text-secondary" href="https://www.facebook.com/profile.php?id=61550654645047">
+        <FaFacebookF className="mx-4"/>
+        </Link> 
+        <Link className="hover:text-secondary" href="https://www.linkedin.com/company/nester-solar/">
+        <AiFillLinkedin />
+        </Link> 
+        
+        </div>
+      
       </div>
       </Transition>
     // </div>
