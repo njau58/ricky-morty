@@ -1,6 +1,7 @@
 
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
+import { useState } from "react";
 import {
   solar_design,
   water_heating,
@@ -72,6 +73,21 @@ const Services = () => {
         "In order to help our clients save on energy, Nester solar solutions carries out Energy Audits and Power Quality analysis with the main focus on detecting inefficiencies in energy usage so as to help our clients realize energy savings up to 30%.We provide solutions for poor power factor, unstable voltage supplies, unstable power supply, harmonic distortions, earth leakages, phase balancing etc.",
     },
   ];
+
+  const [loading, setLoading] = useState(() => {
+    const initialLoading = {};
+    services.map((service) => {
+      initialLoading[service.image] = false;
+    });
+    return initialLoading;
+
+  });
+
+ 
+  const handleLoadingComplete = (src) => {
+    setLoading((prevLoading) => ({ ...prevLoading, [src]: true }));
+  };
+
   return (
     <section
       id="services"
@@ -91,6 +107,8 @@ const Services = () => {
             return (
               <Service
                 key={idx}
+                handleLoadingComplete={handleLoadingComplete}
+                loading={loading}
                 title={service.title}
                 image={service.image}
                 description={service.description}

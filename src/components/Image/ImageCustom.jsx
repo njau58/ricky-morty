@@ -1,9 +1,8 @@
 import Image from "next/image";
 import ProjectSkeleton from "../skeleton/ProjectSkeleton";
 
+const ImageCustom = ({ src, handleLoadingComplete, loading }) => {
 
-const ImageCustom = ({ src, handleLoadingComplete,loading }) => {
-  console.log(src)
   return (
     <div className="h-56">
       {" "}
@@ -18,4 +17,4 @@ const ImageCustom = ({ src, handleLoadingComplete,loading }) => {
   );
 };
 
-export default ImageCustom
+export default ImageCustom;
