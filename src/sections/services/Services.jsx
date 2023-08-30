@@ -39,7 +39,7 @@ const Services = () => {
     {
       title: "Solar Water Heating",
       image: water_heating,
-         customStyle:false,
+         customStyle:true,
       description:
         "Solar water heating systems, or 'solar thermal' systems, use free heat from the sun to warm domestic hot water. A conventional boiler or immersion heater can be used to make the water hotter, or to provide hot water when solar energy is unavailable. Heat absorbed by the panels is used to pre-heat the water in a hot water storage cylinder. This reduces the amount of fuel needed to bring the hot water up to a useable temperature, saving money on heating bills and reducing carbon emissions. Producing domestic hot water for showers, baths and hot taps makes up a significant proportion of a household’s energy use.",
     },
