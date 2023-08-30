@@ -51,7 +51,7 @@ const About = () => {
         >
           Nester Solar
         </p>
-        <p className="text-secondary-text ">
+        <p className="text-secondary-text text-sm  leading-relaxed">
           Nester Solar is a company that specializes in providing professional
           solar solutions. We design and install solar panels for industrial,
           commercial, and residential customers. We are committed to providing
