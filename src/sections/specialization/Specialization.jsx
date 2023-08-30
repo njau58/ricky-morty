@@ -61,7 +61,7 @@ const Specialization = () => {
           className="rounded-md hover:scale-105 transition-transform duration-700"
         ></Image>
       </div>
-      <div className="grid grid-cols-2 gap-4  bg-expertise bg-no-repeat bg-center bg-contain pt-12  ">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4  bg-expertise md:bg-no-repeat bg-center bg-contain md:pt-12  ">
         {expertise?.map((exps, idx) => {
           return (
             <div
