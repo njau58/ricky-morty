@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 import {
@@ -69,7 +69,7 @@ const Services = () => {
       image: energy_audits,
          customStyle:false,
       description:
-        "In order to help our clients save on energy, Peak solar solutions carries out Energy Audits and Power Quality analysis with the main focus on detecting inefficiencies in energy usage so as to help our clients realize energy savings up to 30%.We provide solutions for poor power factor, unstable voltage supplies, unstable power supply, harmonic distortions, earth leakages, phase balancing etc.",
+        "In order to help our clients save on energy, Nester solar solutions carries out Energy Audits and Power Quality analysis with the main focus on detecting inefficiencies in energy usage so as to help our clients realize energy savings up to 30%.We provide solutions for poor power factor, unstable voltage supplies, unstable power supply, harmonic distortions, earth leakages, phase balancing etc.",
     },
   ];
   return (
