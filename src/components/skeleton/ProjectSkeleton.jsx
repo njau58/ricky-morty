@@ -2,9 +2,9 @@ const ProjectSkeleton = () => {
   return (
     <div
       role="status"
-      className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center my-24 mx-auto max-w-5xl px-4"
+      className="space-y-8 animate-pulse md:space-y-0 w-[100%]  md:space-x-8 md:flex md:items-center my-24 mx-auto max-w-5xl px-4"
     >
-      <div className="flex items-center justify-center w-full h-48 bg-gray-300 rounded sm:w-96 dark:bg-gray-700">
+      <div className="flex items-center justify-center w-[90vw] h-48  bg-gray-300 rounded  dark:bg-gray-700">
         <svg
           className="w-12 h-12 text-gray-200"
           xmlns="http://www.w3.org/2000/svg"

@@ -31,11 +31,10 @@ const Projects = () => {
     project7,
     maintanace,
   ];
+  const [loading, setLoading] = useState (() => { const initialLoading = {};
+   nesterProjects.forEach ((src) => { initialLoading[src] = false; }); return initialLoading; });
+   const handleLoadingComplete = (src) => { setLoading ((prevLoading) => ({...prevLoading, [src]: true, })); };
 
-  const onLoadCallBack = (e) => {
-    setIsImageReady(true);
-    typeof onLoadingComplete === "function" && onLoadingComplete(e);
-  };
 
   return (
     <section id="projects" className="my-32  ">
@@ -53,9 +52,9 @@ const Projects = () => {
           {nesterProjects.map((project, idx) => {
             return (
               <div key={idx} className="h-56">
-                <Suspense fallback={<ProjectSkeleton/>}>
-                <ImageCustom src={project} alt="project" />
-                </Suspense>
+                
+                <ImageCustom loading={loading} handleLoadingComplete={handleLoadingComplete} src={project} alt="project" />
+             
                
               </div>
             );

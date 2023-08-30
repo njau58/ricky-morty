@@ -1,30 +1,21 @@
 import Image from "next/image";
 import ProjectSkeleton from "../skeleton/ProjectSkeleton";
-import { useState } from "react";
 
-const ImageCustom = ({ src, alt }) => {
-  const [isImageReady, setIsImageReady] = useState(false);
-  const onLoadCallBack = (img) => {
-    setIsImageReady(true);
-    console.log(img);
-    typeof onLoadingComplete === "function" && onLoadingComplete(e);
-  };
 
+const ImageCustom = ({ src, handleLoadingComplete,loading }) => {
+  console.log(src)
   return (
-    <>
-      {isImageReady ? (
-        <Image
+    <div className="h-56">
+      {" "}
+      {!loading[src] && <ProjectSkeleton />}
+      <Image
         src={src}
-        onLoadingComplete={(img) => onLoadCallBack(img)}
-        alt={alt}
+        alt="Image"
         className="rounded-md w-full h-full object-cover"
-      ></Image>
-      ) : (
-      
-        <ProjectSkeleton />
-      )}
-    </>
+        onLoadingComplete={() => handleLoadingComplete(src)}
+      />{" "}
+    </div>
   );
 };
 
-export default ImageCustom;
+export default ImageCustom
