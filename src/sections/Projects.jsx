@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
+import { Suspense, useState } from "react";
 import Image from "next/image";
 import {
   project1,
@@ -15,6 +16,8 @@ import {
   project6,
   project7,
 } from "../assets";
+import ProjectSkeleton from "../components/skeleton/ProjectSkeleton";
+import ImageCustom from "../components/Image/ImageCustom";
 const Projects = () => {
   const nesterProjects = [
     project4,
@@ -23,11 +26,16 @@ const Projects = () => {
     project1,
     project2,
     project3,
-  
+
     project6,
     project7,
     maintanace,
   ];
+
+  const onLoadCallBack = (e) => {
+    setIsImageReady(true);
+    typeof onLoadingComplete === "function" && onLoadingComplete(e);
+  };
 
   return (
     <section id="projects" className="my-32  ">
@@ -45,11 +53,10 @@ const Projects = () => {
           {nesterProjects.map((project, idx) => {
             return (
               <div key={idx} className="h-56">
-                <Image
-                  src={project}
-                  alt="project"
-                  className="rounded-md w-full h-full object-cover"
-                ></Image>
+                <Suspense fallback={<ProjectSkeleton/>}>
+                <ImageCustom src={project} alt="project" />
+                </Suspense>
+               
               </div>
             );
           })}
