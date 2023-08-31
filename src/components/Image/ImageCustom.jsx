@@ -7,12 +7,12 @@ const ImageCustom = ({ src, handleLoadingComplete, loading }) => {
     <div className="h-56">
       {" "}
       {!loading[src] && <ProjectSkeleton />}
-      <Image
+    {loading[src] && <Image
         src={src}
         alt="Image"
         className="rounded-md w-full h-full object-cover"
         onLoadingComplete={() => handleLoadingComplete(src)}
-      />{" "}
+      />} 
     </div>
   );
 };
