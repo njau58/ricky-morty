@@ -4,7 +4,7 @@ const ProjectSkeleton = ({aboutStyle}) => {
       role="status"
       className="space-y-8 animate-pulse md:space-y-0 w-[100%]  md:space-x-8 md:flex md:items-center  mx-auto max-w-5xl "
     >
-      <div className={`flex items-center justify-center md:w-[40vw] w-[90vw]   h-72 ${aboutStyle?'my-0':'my-24 '}  bg-gray-300 rounded  dark:bg-gray-700`}>
+      <div className={`flex items-center justify-center md:w-[40vw] w-[90vw]   h-72 ${aboutStyle?'my-0':'my-6 '}  bg-gray-300 rounded  dark:bg-gray-700`}>
         <svg
           className="w-12 h-12 text-gray-200"
           xmlns="http://www.w3.org/2000/svg"
