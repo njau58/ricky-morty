@@ -13,7 +13,8 @@ const Service = ({
     <>
       <div className=" bg-white  rounded-md  hover:scale-105 duration-500 cursor-pointer     ">
         <div>
-         <div className="w-full h-full ">{!loading[image]? <ServiceSkeleton />:  <Image
+         <div className="w-full h-full ">{!loading[image] && <ServiceSkeleton />}</div> 
+          <Image
             src={image}
             alt="service"
             onLoadingComplete={() => handleLoadingComplete(image)}
@@ -22,8 +23,7 @@ const Service = ({
                 ? "w-full h-44 rounded-t-md object-center"
                 : "w-full h-44 rounded-t-md object-cover"
             }`}
-          ></Image> }</div> 
-        
+          ></Image>
         </div>
 
         <div className="text-start mx-4 flex flex-col mt-8  rounded-lg space-y-4 max-w-lg  ">
