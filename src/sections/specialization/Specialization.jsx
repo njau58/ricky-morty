@@ -61,9 +61,9 @@ const Specialization = () => {
           </p>
         </div>
         <div>
-          {loading ? (
-            <SpecializationSkeleton />
-          ) : (
+          {loading &&
+            <SpecializationSkeleton />}
+          
             <Image
               src={specialize}
               alt="nester-solar"
@@ -72,7 +72,7 @@ const Specialization = () => {
               onLoadingComplete={()=>handleLoadingComplete}
               className="rounded-md hover:scale-105 transition-transform duration-700"
             ></Image>
-          )}
+        
         </div>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-4  bg-expertise md:bg-no-repeat bg-center bg-contain md:pt-12  ">

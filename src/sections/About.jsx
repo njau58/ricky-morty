@@ -4,7 +4,7 @@ import { about1, about2 } from "../assets";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 import { motion } from "framer-motion";
-import SpecializationSkeleton from '../components/skeleton/SpecializationSkeleton'
+import SpecializationSkeleton from "../components/skeleton/SpecializationSkeleton";
 import { useState } from "react";
 
 const About = () => {
@@ -83,18 +83,16 @@ const About = () => {
         {aboutImages.map((about, idx) => {
           return (
             <div key={idx}>
-              {!loading ? (
-                <SpecializationSkeleton aboutStyle={true} />
-              ) : (
-                <Image
-                  src={about2}
-                  onLoadingComplete={()=>handleLoadingComplete(about)}
-                  alt="nester-solar"
-                  height={900}
-                  width={600}
-                  className="rounded-md hover:scale-105 transition-transform duration-700"
-                ></Image>
-              )}
+              {!loading[about] && <SpecializationSkeleton aboutStyle={true} />}
+
+              <Image
+                src={about2}
+                onLoadingComplete={() => handleLoadingComplete(about)}
+                alt="nester-solar"
+                height={900}
+                width={600}
+                className="rounded-md hover:scale-105 transition-transform duration-700"
+              ></Image>
             </div>
           );
         })}
