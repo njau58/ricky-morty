@@ -83,8 +83,7 @@ const About = () => {
         {aboutImages.map((about, idx) => {
           return (
             <div key={idx}>
-              {!loading[about] && <SpecializationSkeleton aboutStyle={true} />}
-
+              
               <Image
                 src={about2}
                 onLoadingComplete={() => handleLoadingComplete(about)}
@@ -93,6 +92,8 @@ const About = () => {
                 width={600}
                 className="rounded-md hover:scale-105 transition-transform duration-700"
               ></Image>
+              {!loading[about] && <SpecializationSkeleton aboutStyle={true} />}
+
             </div>
           );
         })}
