@@ -23,7 +23,7 @@ const HeaderContact = ({ scrollThreshold }) => {
         <AiFillPhone />
         <Link href="tel:+254724045142 ">
           {" "}
-          <div className="cursor-pointer md:text-sm  pl-1 text-xs">+254724045142 / +254723716718 </div>
+          <div className="cursor-pointer md:text-sm  pl-1 text-xs">+254710782326 / +254723716718 </div>
         </Link>
         <span className="px-3 md:px-6 ">|</span>
         <MdEmail />

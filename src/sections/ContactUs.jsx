@@ -21,7 +21,7 @@ const ContactUs = () => {
           <div className="text-xl text-secondary">
             <AiFillPhone />
           </div>
-          <div className="text-sm">+254724045142 / +254723716718</div>
+          <div className="text-sm">+254710782326 / +254723716718</div>
         </div>
         <div className="flex flex-row space-x-4 items-center">
           <div className="text-xl text-secondary">
@@ -37,7 +37,7 @@ const ContactUs = () => {
         </div>
         <Link 
               target="_blank"
-                href="https://wa.me/+254724045142 
+                href="https://wa.me/+254723716718  
 "
               >
                 {" "}

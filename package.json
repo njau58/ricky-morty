@@ -1,12 +1,13 @@
 {
   "name": "nestersolar",
   "version": "0.1.0",
+  "homepage": "https://nestersolar.co.ke/",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
