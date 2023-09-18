@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], weight: "700" });
 const Hero = () => {
   return (
     <>
-      <section className=" relative w-full h-full bg-primary_dark    bg-hero  bg-cover   bg-fixed md:bg-center  mx-auto bg-no-repeat  ">
+      <section id="home" className=" relative w-full h-full bg-primary_dark    bg-hero  bg-cover   bg-fixed md:bg-center  mx-auto bg-no-repeat  ">
         <motion.div className=" relative z-20 my-auto md:pt-16 pt-32  h-full ml-4 md:ml-12 justify-center md:mx-auto flex text-white items-start flex-col md:items-center space-y-9 md:justify-center">
           <motion.p
             initial={{ x: "-100vw" }}

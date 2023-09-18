@@ -1,101 +1,82 @@
 const generateLinks = (router, scrollThreshold, toggleMenuIcon) => {
-
-
   const links = [
     {
-      href: "/",
+      href: "home",
       linkTo: "Home",
       onClick: { toggleMenuIcon },
       mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
+      activeClass: "text-secondary-text hover:text-primary cursor-pointer",
       className: `
-                ${
-                  router?.asPath == "/"
-                    ? "text-primary"
-                    : scrollThreshold
-                    ? " text-secondary-text hover:text-primary cursor-pointer"
-                    : "text-white hover:text-primary cursor-pointer"
-                } 
-                 
-              `,
+      ${
+      scrollThreshold
+          ? " text-secondary-text hover:text-primary cursor-pointer"
+          : "text-white hover:text-primary cursor-pointer"
+      } 
+       
+    `,
     },
     {
-      href: "#about",
+      href: "about",
       linkTo: "About Us",
       onClick: { toggleMenuIcon },
       scroll: false,
       mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
+      activeClass: "text-primary cursor-pointer",
       className: `
-                  ${
-                    router?.asPath == "/#about"
-                      ? "text-primary"
-                      : scrollThreshold
-                      ? " text-secondary-text hover:text-primary cursor-pointer"
-                      : "text-white hover:text-primary cursor-pointer"
-                  } 
-                   
-                `,
+      ${
+      scrollThreshold
+          ? " text-secondary-text hover:text-primary cursor-pointer"
+          : "text-white hover:text-primary cursor-pointer"
+      } 
+       
+    `,
+      offset:-150
     },
-    // {
-    //   href: "#products",
-    //   linkTo: "Products",
-    //   onClick: { toggleMenuIcon },
-    //   scroll: false,
-    //   mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
-    //   className: `
-    //                 ${
-    //                   router?.asPath == "/#products"
-    //                     ? "text-primary"
-    //                     : scrollThreshold
-    //                     ? " text-secondary-text hover:text-primary cursor-pointer"
-    //                     : "text-white hover:text-primary cursor-pointer"
-    //                 } 
-                     
-    //               `,
-    // },
+
     {
-      href: "#projects",
+      href: "projects",
       linkTo: "Projects",
       onClick: { toggleMenuIcon },
-      scroll: false,
       mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
+      activeClass: "text-primary cursor-pointer",
       className: `
-                    ${
-                      router?.asPath == "/#projects"
-                        ? "text-primary"
-                        : scrollThreshold
-                        ? " text-secondary-text hover:text-primary cursor-pointer"
-                        : "text-white hover:text-primary cursor-pointer"
-                    } 
-                     
-                  `,
+      ${
+      scrollThreshold
+          ? " text-secondary-text hover:text-primary cursor-pointer"
+          : "text-white hover:text-primary cursor-pointer"
+      } 
+       
+    `,
+      offset:-150
     },
     {
-      href: "#services",
+      href: "services",
       linkTo: "Services",
       onClick: { toggleMenuIcon },
       scroll: false,
       mobileStyle: "text-secondary-text  hover:text-primary cursor-pointer",
+      activeClass: "text-primary cursor-pointer",
       className: `
-                    ${
-                      router?.asPath == "/#services"
-                        ? "text-primary"
-                        : scrollThreshold
-                        ? " text-secondary-text hover:text-primary cursor-pointer"
-                        : "text-white hover:text-primary cursor-pointer"
-                    } 
-                     
-                  `,
+      ${
+      scrollThreshold
+          ? " text-secondary-text hover:text-primary cursor-pointer"
+          : "text-white hover:text-primary cursor-pointer"
+      } 
+       
+    `,
+      offset:-100
     },
     {
-      href: "#contact",
+      href: "contact",
       linkTo: "Get a quote",
       onClick: { toggleMenuIcon },
-      scroll: false,
+    offset:-170,
+
 
       className:
-        " px-6 py-3 bg-primary border border-primary hover:border-primary hover:bg-transparent hover:text-primary rounded-md text-sm text-white",
+        " px-6 py-3 bg-primary cursor-pointer border border-primary hover:border-primary hover:bg-transparent hover:text-primary rounded-md text-sm text-white",
       mobileStyle:
-        " px-6 py-3 bg-primary border border-primary hover:border-primary hover:bg-transparent hover:text-primary rounded-md text-sm text-white",
+        " px-6 py-3 bg-primary border cursor-pointer border-primary hover:border-primary hover:bg-transparent hover:text-primary rounded-md text-sm text-white",
     },
   ];
 

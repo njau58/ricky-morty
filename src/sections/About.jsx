@@ -22,7 +22,7 @@ const About = () => {
     },
   };
 
-  const aboutImages = [about1, about2];
+  const aboutImages = [about1];
   const [loading, setLoading] = useState(() => {
     const initialLoading = {};
     aboutImages.map((about) => {

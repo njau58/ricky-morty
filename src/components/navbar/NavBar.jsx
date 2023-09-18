@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useLayoutEffect, useState } from "react";
 import HeaderContact from "./HeaderContacts";
@@ -7,6 +6,7 @@ import Logo from "../Logo";
 import useToggle from "../../customHooks/useToggle";
 import MobileMenu from "./MobileMenu";
 import generateLinks from ".";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [scrollThreshold, setScrollThreshold] = useState(false);
@@ -45,16 +45,21 @@ const NavBar = () => {
             : "bg-transparent top-0 w-full      z-40 mt-16   fixed duration-300 ease-in-out  "
         } `}
       >
-        <div className="flex items-center md:mx-16 py-6  justify-between">
+        <div className="flex items-center  py-6  justify-between max-w-7xl mx-auto">
           <Logo scrollThreshold={scrollThreshold}></Logo>
 
           <ul className=" text-medium hidden md:flex space-x-8">
             {desktopLinks?.map((link, idx) => (
-              <li key={idx}>
+              <li
+                className="text-secondary-text hover:text-primary cursor-pointer"
+                key={idx}
+              >
                 <Link
-                  href={link.href}
-                  scroll={link.scroll}
+                  to={link.href}
+                  offset={link.offset}
                   className={link.className}
+                  activeClass={link.activeClass}
+                  spy={true}
                 >
                   {link.linkTo}
                 </Link>

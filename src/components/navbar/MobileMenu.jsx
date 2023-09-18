@@ -1,10 +1,11 @@
-import Link from "next/link";
+
 import { useEffect, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import generateLinks from ".";
 import { Transition } from "@headlessui/react";
 import {AiFillLinkedin } from 'react-icons/ai'
 import {FaFacebookF } from 'react-icons/fa'
+import { Link} from 'react-scroll'
 
 const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
   const [mobileLinks, setMobileLinks] = useState([]);
@@ -20,7 +21,7 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
 
   return (
 
-    // <div className={`${showMenuIcon ? " md:hidden  " : "hidden"}`}>
+   
           
     <Transition
     show={showMenuIcon}
@@ -46,10 +47,12 @@ const MobileMenu = ({ showMenuIcon, toggleMenuIcon }) => {
           {mobileLinks?.map((link, idx) => (
             <li key={idx}>
               <Link
-                href={link.href}
+                to={link.href}
                 onClick={toggleMenuIcon}
-                scroll={link.scroll}
+                spy={true}
                 className={link.mobileStyle}
+                activeClass={link.activeClass}
+                offset={link.offset}
               >
                 {link.linkTo}
               </Link>

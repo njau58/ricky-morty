@@ -5,6 +5,7 @@ import { logo_white } from "../assets";
 import { MdEmail } from "react-icons/md";
 import { AiFillPhone } from "react-icons/ai";
 import { MdOutlinePlace } from "react-icons/md";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -15,24 +16,35 @@ const Footer = () => {
             <div className="text-slate-50 font-semibold ">Quick Links</div>
 
             <div className="flex flex-col space-y-3 text-xs font-normal ">
-            <Link href="#about" scroll={false}>
-                <div className=" text-white   hover:underline p-[4px] ">
-                  About
-                </div>
-              </Link>
-              <Link href="#services" scroll={false}>
+              <ScrollLink
+                to="about"
+                spy={true}
+                offset={-150}
+                className=" text-white cursor-pointer   hover:underline p-[4px] "
+              >
+                About
+              </ScrollLink>
+              <ScrollLink
+                to="services"
+                spy={true}
+                offset={-100}
+                className=" text-white cursor-pointer   hover:underline p-[4px] "
+              >
                 <div className=" text-white   hover:underline p-[4px] ">
                   Services
                 </div>
-              </Link>
+              </ScrollLink>
 
-            
-
-              <Link href="#projects" scroll={false}>
+              <ScrollLink
+                to="projects"
+                spy={true}
+                offset={-150}
+                className=" text-white cursor-pointer   hover:underline p-[4px] "
+              >
                 <div className=" text-white   hover:underline p-[4px] ">
                   Projects
                 </div>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
 
