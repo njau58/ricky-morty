@@ -83,7 +83,7 @@ const AddNoteModal = () => {
               as="textarea"
               name="note"
               type="text"
-              className="bg-gray-50 border border-gray-300 h-44 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+              className="bg-gray-50 border border-gray-300 max-h-44 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
               placeholder="Type your note here..."
             ></Field>
             <p className="text-red-400 font-light text-xs">
