@@ -49,7 +49,7 @@ const ResidentCard = ({ resident_url }: ResidentCardProps) => {
           </span>
           <Link
             href={`/resident/${extractIdFromUrl(resident_url)}`}
-            className="absolute hidden rounded-md group-hover:flex items-center justify-center w-full h-full inset-0 bg-black/60 z-10 t"
+            className="absolute hidden rounded-md group-hover:flex items-center justify-center w-full h-full inset-0 bg-primary bg-opacity-60 z-10 "
           >
             <span className="text-white inset-0">
               <FaEye />

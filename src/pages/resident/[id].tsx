@@ -2,7 +2,7 @@ import Layout from "@/Layout";
 import { useGetResidentByIdQuery } from "@/features/api/apiSlice";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { Spinner } from "@/components/loaders";
+import { NoteSkeleton, Spinner } from "@/components/loaders";
 import Note from "@/components/note";
 import Button from "@/components/button/Button";
 import { useContext } from "react";
@@ -34,7 +34,7 @@ const ResidentDetailPage = () => {
       )}
       {data && (
         <section className=" flex items-center  md:flex-row  flex-col justify-center gap-4 pt-32 w-full md:mx-auto  max-w-7xl px-4">
-          <div className=" flex flex-col items-center gap-4  justify-center border rounded-md bg-white  w-full p-4 pb-16">
+          <div className=" flex flex-col items-center gap-4  justify-center border rounded-md bg-white max-w-[20rem]  w-full  p-4 pb-16">
             <Image
               width={100}
               height={100}
@@ -62,22 +62,27 @@ const ResidentDetailPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full bg-white  p-4 rounded-md border h-[24rem]">
+          <div className="w-full bg-white  p-4 rounded-md border h-[24rem] overflow-y-auto">
             <div className="flex flex-row w-full items-center justify-between mb-4 gap-4 ">
               <p className="font-bold  ">
                 {" "}
                 Notes about <span className="text-xl"> {data?.name}</span>
               </p>
 
-              <div className="w-full max-w-[10rem]">
+              <div className="w-full max-w-[6rem]">
                 {" "}
                 <Button text="Add Note" onClick={toggleModal} />
               </div>
             </div>
             <hr></hr>
-
+            {isLoading && (
+              <div className=" flex flex-col gap-4 mt-12">
+                {" "}
+                <NoteSkeleton skeletonList={3} />
+              </div>
+            )}
             {notes_data?.msg?.length === 0 ? (
-              <div className="flex items-center justify-center w-full h-full gap-4">
+              <div className="flex items-center justify-center w-full h-full gap-1">
                 <span>
                   <FaInfoCircle />
                 </span>
@@ -87,7 +92,7 @@ const ResidentDetailPage = () => {
                 </p>
               </div>
             ) : (
-              <div className="flex flex-col gap-8 max-h-[18rem] overflow-y-scroll bg-slate-50 p-8">
+              <div className="flex flex-col gap-4    p-2">
                 {notes_data?.msg?.map((n: any) => {
                   return (
                     <div key={n._id}>

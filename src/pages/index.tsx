@@ -13,14 +13,14 @@ export default function Home() {
         <form className="max-w-md mx-auto ">
           <label
             htmlFor="default-search"
-            className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            className="mb-2 text-sm font-medium text-gray-900 sr-only"
           >
             Search
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
               <svg
-                className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                className="w-4 h-4 text-gray-500 "
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -48,6 +48,7 @@ export default function Home() {
           </div>
         </form>
       </div>
+
       <div className=" grid grid-flow-row gap-4   sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-32 pb-56 max-w-[85rem] mx-auto ">
         {isLoading && <CardSkeleton skeletonList={12} />}
         {data?.results.map((lcn: any) => {
