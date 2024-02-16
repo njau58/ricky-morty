@@ -1,6 +1,6 @@
 import type { NextApiResponse, NextApiRequest } from "next";
-import connectDB from "../lib/connectDB";
-import NoteModel from "../Models/NotesModel";
+import connectDB from "../../lib/connectDB";
+import NoteModel from "../../Models/NotesModel";
 
 const sendNote = async (req: NextApiRequest, res: NextApiResponse) => {
   const { resident_id, note } = req.body;

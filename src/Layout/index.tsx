@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>Ricky & Morty</title>
+        <title>Ricky&Morty</title>
         <meta name="description"></meta>
       </Head>
 
