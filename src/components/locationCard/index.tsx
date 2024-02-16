@@ -1,28 +1,15 @@
 import React from "react";
-import Image from "next/image";
-import ResidentCard from "../residentCard";
+import Link from "next/link";
 
 interface LocationCardProps {
-  id?: number;
+  location_id?: number;
   name?: string;
   type?: string;
-  dimension?: string;
-  created?: string;
-  url?: string;
 
   residents?: string[];
 }
 
-const LocationCard = ({
-  id,
-  name,
-  type,
-  dimension,
-  residents,
-  created,
-  url,
-}: LocationCardProps) => {
-  console.log(residents);
+const LocationCard = ({ name, type, location_id }: LocationCardProps) => {
   return (
     <div className=" flex flex-col gap-4 bg-white shadow-md rounded-md w-full md:max-w-sm sm:max-w-xl p-4 h-full max-h-[22rem] mx-auto overflow-y-auto scrollbar scrollbar-thumb-blue-600 scrollbar-thumb-rounded ">
       <div className="">
@@ -34,22 +21,14 @@ const LocationCard = ({
           <label className="font-light text-gray-600 text-sm">Type:</label>
           <p className=" text-md ml-2">{type}</p>
         </div>
-        <div className="flex flex-row items-center ">
-          <label className="font-light text-gray-600 text-sm">Dimension:</label>
-          <p className=" text-md ml-2">{dimension}</p>
-        </div>
       </div>
       <hr></hr>
-      <label className="font-light text-sm">Residents</label> {}
-      <div className="grid grid-flow-row  grid-cols-3 gap-4  ">
-        {residents?.map((r: any, idx) => {
-          return (
-            <div key={r}>
-              <ResidentCard resident_url={r} />{" "}
-            </div>
-          );
-        })}
-      </div>
+      <Link
+        href={`/location/${location_id}`}
+        className="font-light text-sm px-1 py-1.5 bg-primary text-white rounded-md w-32 text-center hover:bg-secondary"
+      >
+        View Residents
+      </Link>{" "}
     </div>
   );
 };

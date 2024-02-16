@@ -26,10 +26,16 @@ export const apiSlice = createApi({
             body:note
 
         })
-    })
+    }),
+    //get location by id
+
+    getLocationById:builder.query<any, any>({
+        query:(location_id)=>(`/location/${location_id}`)
 
     }),
 
+    }),
+  
 
 
 
@@ -40,4 +46,4 @@ export const apiSlice = createApi({
 
 
 
-export const {useGetAllLocationsQuery, useGetResidentByIdQuery} = apiSlice
+export const {useGetAllLocationsQuery, useGetResidentByIdQuery, useGetLocationByIdQuery} = apiSlice

@@ -4,10 +4,7 @@ import Link from "next/link";
 import { FaEye } from "react-icons/fa6";
 import { ResidentCardSkeleton } from "../loaders";
 interface ResidentCardProps {
-  status?: "Alive" | "Dead" | "Unkown";
-  image_src?: any;
   resident_url?: any;
-  resident_id?: number;
 }
 
 const ResidentCard = ({ resident_url }: ResidentCardProps) => {
@@ -25,13 +22,8 @@ const ResidentCard = ({ resident_url }: ResidentCardProps) => {
   return (
     <>
       {isLoading && <ResidentCardSkeleton />}
-      <div>
-        {typeof data === undefined && (
-          <p className="text-xs">There are no residents.</p>
-        )}
-      </div>
 
-      <div className=" relative max-w-[8rem] rounded-md">
+      <div className=" relative border border-gray-200 max-w-[16rem]   rounded-md bg-white">
         <div className=" relative group">
           <Image
             src={data?.image}
@@ -40,10 +32,10 @@ const ResidentCard = ({ resident_url }: ResidentCardProps) => {
             loading="lazy"
             decoding="async"
             alt=""
-            className="w-full h-full rounded-md object-covers  hover:scale-125 duration-500"
+            className="w-full max-h-[12.5rem] rounded-md object-cover hover:scale-125 duration-500"
           />
           <span
-            className={`absolute top-1 px-1  rounded-md right-1 text-w hite  text-xs  text-white ${
+            className={`absolute top-1 px-2.5 py-1  rounded-md right-1 text-w hite  text-sm  text-white ${
               data?.status === "unknown"
                 ? "bg-gray-600"
                 : data?.status === "Dead"
@@ -64,7 +56,9 @@ const ResidentCard = ({ resident_url }: ResidentCardProps) => {
             </span>
           </Link>
         </div>
-        <h2 className="font-medium text-xs">{data?.name}</h2>
+        <div className="p-4">
+          <h2 className="font-medium text-lg ">{data?.name}</h2>
+        </div>
       </div>
     </>
   );
