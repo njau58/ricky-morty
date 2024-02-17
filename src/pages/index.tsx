@@ -5,69 +5,83 @@ import { useGetAllLocationsQuery } from "@/features/api/apiSlice";
 import Pagination from "@/pagination";
 import { useState } from "react";
 import { debounce } from "lodash";
+import TypeFilter from "@/components/filters/type";
 
 export default function Home() {
   const [page, setPage] = useState<number>(0);
   const [search_term, setSearchTerm] = useState<string>("");
+  const [location_type, setLocationType] = useState<string>("");
 
   const { data, error, isLoading } = useGetAllLocationsQuery({
     page: page,
     search_term: search_term,
+    location_type: location_type,
   });
-
-  // console.log(data);
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
   };
 
+  console.log(location_type);
+
   const handleSearchDebounce = debounce(async (value) => {
     setSearchTerm(value);
-  }, 1000);
+  }, 500);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleSearchDebounce(e.target.value);
   };
 
+  const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLocationType(e.target.value);
+  };
+
   return (
     <Layout>
-      <div className="mt-32">
-        <form className="max-w-md mx-auto ">
-          <label
-            htmlFor="default-search"
-            className="mb-2 text-sm font-medium text-gray-900 sr-only"
-          >
-            Search
-          </label>
-          <div className="relative mx-2">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg
-                className="w-4 h-4 text-gray-500 "
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-              </svg>
+      <div className="mt-32  mx-auto justify-between">
+        <form className=" mx-auto flex flex-col gap-4 md:flex-row justify-between max-w-7xl ">
+          <div className="w-full md:max-w-md">
+            <label
+              htmlFor="default-search"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only"
+            >
+              Search
+            </label>
+            <div className="relative mx-2">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-500 "
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                onChange={handleSearch}
+                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
+                placeholder="Search Locations"
+                required
+              />
             </div>
-            <input
-              type="search"
-              id="default-search"
-              onChange={handleSearch}
-              className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
-              placeholder="Search Locations"
-              required
-            />
+          </div>
+          <div className="flex flex-row gap-2 mx-2">
+            <TypeFilter handleOnSelect={handleOnSelect} />
+            {/* <TypeFilter /> */}
           </div>
         </form>
       </div>
+
       <div className="">
         <div className=" grid grid-flow-row gap-4    sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-16 pb-8 max-w-[85rem] mx-auto ">
           {isLoading && <CardSkeleton skeletonList={12} />}
