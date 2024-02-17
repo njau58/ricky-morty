@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import ResidentImageOverlap from "../residentImageOverlap";
 
 interface LocationCardProps {
   location_id?: number;
@@ -9,7 +10,12 @@ interface LocationCardProps {
   residents?: string[];
 }
 
-const LocationCard = ({ name, type, location_id }: LocationCardProps) => {
+const LocationCard = ({
+  name,
+  type,
+  location_id,
+  residents,
+}: LocationCardProps) => {
   return (
     <div className=" flex flex-col gap-4 bg-white shadow-md rounded-md w-full md:max-w-sm sm:max-w-xl p-4 h-full max-h-[22rem] mx-auto overflow-y-auto scrollbar scrollbar-thumb-blue-600 scrollbar-thumb-rounded ">
       <div className="">
@@ -23,12 +29,15 @@ const LocationCard = ({ name, type, location_id }: LocationCardProps) => {
         </div>
       </div>
       <hr></hr>
-      <Link
-        href={`/location/${location_id}`}
-        className="font-light text-sm px-1 py-1.5 bg-primary text-white rounded-md w-32 text-center hover:bg-secondary"
-      >
-        View Residents
-      </Link>{" "}
+      <div className="flex flex-row gap-2.5">
+        <Link
+          href={`/location/${location_id}`}
+          className="font-light text-sm px-1 py-1.5 bg-primary text-white rounded-md w-32 text-center hover:bg-secondary"
+        >
+          View Residents
+        </Link>
+        <ResidentImageOverlap residents={residents} />
+      </div>
     </div>
   );
 };

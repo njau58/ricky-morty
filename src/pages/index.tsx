@@ -58,6 +58,7 @@ export default function Home() {
                 name={lcn.name}
                 type={lcn.type}
                 location_id={lcn.id}
+                residents={lcn.residents}
               />
             </div>
           );

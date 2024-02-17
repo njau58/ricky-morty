@@ -32,7 +32,17 @@ export const CardSkeleton = ({ skeletonList }: SkeletonProps) => {
             })}
             <hr className="mt-8"></hr>
 
-            <div className="bg-slate-200  h-5  w-[20%]  md:w-[50%] animate-pulse  mt-"></div>
+            <div className="flex flex-row items-center   w-full ">
+              <div className="bg-slate-200  h-5   md:w-[50%] animate-pulse mr-2 "></div>
+              {Array.from({ length: 3 }).map((_: any) => {
+                return (
+                  <div key={_} className="flex flex-row  gap-4">
+                    {" "}
+                    <div className="bg-slate-200 rounded-full  h-8  w-8 animate-pulse "></div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       );
