@@ -15,7 +15,7 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   return (
     <ReactPaginate
-      pageRangeDisplayed={5}
+      pageRangeDisplayed={2}
       pageCount={pageCount}
       previousLabel={<MdKeyboardDoubleArrowLeft />}
       nextLabel={<MdKeyboardDoubleArrowRight />}

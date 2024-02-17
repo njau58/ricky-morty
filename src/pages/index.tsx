@@ -15,9 +15,7 @@ export default function Home() {
   const { data, error, isLoading } = useGetAllLocationsQuery(page);
 
   const handlePageClick = (data: any) => {
-    const current_page = data.selected + 1;
-
-    setPage(current_page);
+    setPage(data.selected + 1);
   };
 
   return (
@@ -62,7 +60,7 @@ export default function Home() {
         </form>
       </div>
       <div className="">
-        <div className=" grid grid-flow-row gap-4 grid-cols-2   sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-32 pb-8 max-w-[85rem] mx-auto ">
+        <div className=" grid grid-flow-row gap-4    sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-16 pb-8 max-w-[85rem] mx-auto ">
           {isLoading && <CardSkeleton skeletonList={12} />}
           {data?.results.map((lcn: any) => {
             return (
