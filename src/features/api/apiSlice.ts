@@ -8,8 +8,16 @@ export const apiSlice = createApi({
     endpoints:(builder)=>({
 
         //get all locations
-        getAllLocations:builder.query<any, number>({
-            query:(page)=>(`/location?page=${page}`)
+        getAllLocations:builder.query<any, {page:number, search_term:string}>({
+            query:(args)=>{
+
+                console.log(args)
+
+                const {page, search_term} = args
+                return {
+                    url:`/location?page=${page}&&name=${search_term}`
+                   }
+            }
 
         }),
 
@@ -19,6 +27,7 @@ export const apiSlice = createApi({
         query:(resident_id)=>(`/character/${resident_id}`)
 
     }),
+
 
     createNote :builder.mutation<any, object>({
         query:(note)=>({

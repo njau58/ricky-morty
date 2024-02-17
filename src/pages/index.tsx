@@ -1,21 +1,30 @@
 import Layout from "@/Layout";
-import Button from "@/components/button/Button";
 import { CardSkeleton } from "@/components/loaders";
 import LocationCard from "@/components/locationCard";
 import { useGetAllLocationsQuery } from "@/features/api/apiSlice";
 import Pagination from "@/pagination";
-import { useRouter } from "next/router";
 import { useState } from "react";
+import { debounce } from "lodash";
 
 export default function Home() {
   const [page, setPage] = useState<number>(0);
+  const [search_term, setSearchTerm] = useState<string>("");
 
-  console.log(page);
-
-  const { data, error, isLoading } = useGetAllLocationsQuery(page);
+  const { data, error, isLoading } = useGetAllLocationsQuery({
+    page: page,
+    search_term: search_term,
+  });
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
+  };
+
+  const handleSearchDebounce = debounce(async (value) => {
+    setSearchTerm(value);
+  }, 1000);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    handleSearchDebounce(e.target.value);
   };
 
   return (
@@ -28,7 +37,7 @@ export default function Home() {
           >
             Search
           </label>
-          <div className="relative">
+          <div className="relative mx-2">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
               <svg
                 className="w-4 h-4 text-gray-500 "
@@ -49,13 +58,11 @@ export default function Home() {
             <input
               type="search"
               id="default-search"
+              onChange={handleSearch}
               className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
               placeholder="Search Locations"
               required
             />
-            <div className="text-white absolute end-2.5 bottom-2.5">
-              <Button type="submit" text="Search" />
-            </div>
           </div>
         </form>
       </div>
