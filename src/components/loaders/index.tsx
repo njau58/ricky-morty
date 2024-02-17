@@ -18,7 +18,7 @@ export const CardSkeleton = ({ skeletonList }: SkeletonProps) => {
       return (
         <div
           key={idx}
-          className=" bg-white border rounded-md shadow-md w-full h-full p-4 max-h-[10rem] max-w-[20rem]"
+          className=" bg-white border rounded-md shadow-md w-full h-full p-4 max-h-[10rem] md:max-w-[20rem]"
         >
           <div className="flex flex-col gap-2  px-2">
             {Array.from({ length: 2 }).map((_: any) => {

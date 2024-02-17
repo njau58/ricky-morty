@@ -76,7 +76,7 @@ const ResidentDetailPage = () => {
               </div>
             </div>
             <hr></hr>
-            {isLoading && (
+            {notes_loading && (
               <div className=" flex flex-col gap-4 mt-12">
                 {" "}
                 <NoteSkeleton skeletonList={3} />
