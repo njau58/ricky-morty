@@ -15,6 +15,8 @@ export default function Home() {
     search_term: search_term,
   });
 
+  // console.log(data);
+
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
   };
