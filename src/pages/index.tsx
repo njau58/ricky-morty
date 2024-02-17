@@ -14,14 +14,11 @@ export default function Home() {
 
   const { data, error, isLoading } = useGetAllLocationsQuery(page);
 
-  const router = useRouter();
   const handlePageClick = (data: any) => {
     const current_page = data.selected + 1;
 
     setPage(current_page);
   };
-
-  console.log("this data", data);
 
   return (
     <Layout>
@@ -64,23 +61,23 @@ export default function Home() {
           </div>
         </form>
       </div>
-
-      <div className=" grid grid-flow-row gap-4   sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-32 pb-56 max-w-[85rem] mx-auto ">
-        {isLoading && <CardSkeleton skeletonList={12} />}
-        {data?.results.map((lcn: any) => {
-          return (
-            <div key={lcn.id}>
-              <LocationCard
-                name={lcn.name}
-                type={lcn.type}
-                location_id={lcn.id}
-                residents={lcn.residents}
-              />
-            </div>
-          );
-        })}
-
-        <div className=" grid col-span-4 pb-8  w-full place-content-end">
+      <div className="">
+        <div className=" grid grid-flow-row gap-4 grid-cols-2   sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-32 pb-8 max-w-[85rem] mx-auto ">
+          {isLoading && <CardSkeleton skeletonList={12} />}
+          {data?.results.map((lcn: any) => {
+            return (
+              <div key={lcn.id}>
+                <LocationCard
+                  name={lcn.name}
+                  type={lcn.type}
+                  location_id={lcn.id}
+                  residents={lcn.residents}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className=" mx-auto md:grid md:col-span-4 pb-8 overflow-auto md:max-w-7xl   w-full md:place-content-end">
           {" "}
           <Pagination
             pageCount={data?.info.count}
