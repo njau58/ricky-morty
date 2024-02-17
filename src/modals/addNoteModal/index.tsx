@@ -65,7 +65,7 @@ const AddNoteModal = () => {
                 "Note must have 80 words or less",
                 (val: any) => {
                   const wordCount = val.split(/\s+/).length;
-                  return wordCount <= 0;
+                  return wordCount <= 80;
                 }
               )
               .required("Note is required"),

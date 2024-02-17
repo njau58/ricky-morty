@@ -27,15 +27,15 @@ const ResidentDetailPage = () => {
   return (
     <Layout>
       {isOpen && <AddNoteModal />}
-      {isLoading && (
-        <div className=" flex items-center justify-center w-full h-screen ">
-          <Spinner />
-        </div>
-      )}
 
       {data && (
         <section className=" flex items-center  md:flex-row  flex-col justify-center gap-4 pt-32 w-full md:mx-auto  max-w-7xl px-4">
           <div className=" flex flex-col items-center gap-4  justify-center border rounded-md bg-white md:max-w-[20rem]  w-full  p-4 pb-16">
+            {isLoading && (
+              <div className=" flex items-center justify-center w-full h-screen ">
+                <Spinner />
+              </div>
+            )}
             <Image
               width={100}
               height={100}
