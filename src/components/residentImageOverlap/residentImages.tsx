@@ -10,9 +10,6 @@ const ResidentImages = ({ resident_url }: ResidentImageProps) => {
 
   const { data, error, isSuccess } = useGetResidentByIdQuery(id);
 
-  console.log(data);
-
-  console.log(id);
   return (
     <>
       <Image
@@ -20,7 +17,7 @@ const ResidentImages = ({ resident_url }: ResidentImageProps) => {
         width={100}
         height={100}
         alt=""
-        className=" bg-primary rounded-full h-9 w-9"
+        className=" bg-gray-200 rounded-full h-9 w-9"
       ></Image>
       {error && <p className="text-xs">Preview error</p>}
     </>

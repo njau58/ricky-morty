@@ -8,8 +8,8 @@ export const apiSlice = createApi({
     endpoints:(builder)=>({
 
         //get all locations
-        getAllLocations:builder.query<any, void>({
-            query:()=>(`/location`)
+        getAllLocations:builder.query<any, number>({
+            query:(page)=>(`/location?page=${page}`)
 
         }),
 

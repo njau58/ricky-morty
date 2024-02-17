@@ -3,9 +3,25 @@ import Button from "@/components/button/Button";
 import { CardSkeleton } from "@/components/loaders";
 import LocationCard from "@/components/locationCard";
 import { useGetAllLocationsQuery } from "@/features/api/apiSlice";
+import Pagination from "@/pagination";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Home() {
-  const { data, error, isLoading } = useGetAllLocationsQuery();
+  const [page, setPage] = useState<number>(0);
+
+  console.log(page);
+
+  const { data, error, isLoading } = useGetAllLocationsQuery(page);
+
+  const router = useRouter();
+  const handlePageClick = (data: any) => {
+    const current_page = data.selected + 1;
+
+    setPage(current_page);
+  };
+
+  console.log("this data", data);
 
   return (
     <Layout>
@@ -63,6 +79,14 @@ export default function Home() {
             </div>
           );
         })}
+
+        <div className=" grid col-span-4 pb-8  w-full place-content-end">
+          {" "}
+          <Pagination
+            pageCount={data?.info.count}
+            handlePageClick={handlePageClick}
+          />
+        </div>
       </div>
     </Layout>
   );
