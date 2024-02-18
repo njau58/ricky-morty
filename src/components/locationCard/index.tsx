@@ -3,17 +3,19 @@ import Link from "next/link";
 import ResidentImageOverlap from "../residentImageOverlap";
 
 interface LocationCardProps {
-  location_id?: number;
-  name?: string;
-  type?: string;
+  location_id: number;
+  name: string;
+  type: string;
+  dimension: string;
 
-  residents?: string[];
+  residents: string[];
 }
 
 const LocationCard = ({
   name,
   type,
   location_id,
+  dimension,
   residents,
 }: LocationCardProps) => {
   return (
@@ -26,6 +28,10 @@ const LocationCard = ({
         <div className="flex flex-row items-center ">
           <label className="font-light text-gray-600 text-sm">Type:</label>
           <p className=" text-md ml-2">{type}</p>
+        </div>
+        <div className="flex flex-row items-center ">
+          <label className="font-light text-gray-600 text-sm">Dimension:</label>
+          <p className=" text-md ml-2">{dimension}</p>
         </div>
       </div>
       <hr></hr>

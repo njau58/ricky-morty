@@ -11,8 +11,6 @@ const ResidentImages = ({ resident_url, idx }: ResidentImageProps) => {
 
   const { data, error } = useGetResidentByIdQuery(id);
 
-  console.log(idx);
-
   return (
     <>
       <Image

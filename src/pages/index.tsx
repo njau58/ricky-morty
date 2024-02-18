@@ -23,6 +23,9 @@ export default function Home() {
   });
   const errMsg = useRtkQErrors(!isLoading && error);
 
+  let posts_per_page = (data?.info.count - 20 * (page - 1), 20);
+  console.log(data);
+
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
   };
@@ -37,9 +40,11 @@ export default function Home() {
 
   const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLocationType(e.target.value);
+    setPage(1);
   };
   const handleDimensionSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setDimension(e.target.value);
+    setPage(1);
   };
 
   return (
@@ -101,6 +106,7 @@ export default function Home() {
                   type={lcn.type}
                   location_id={lcn.id}
                   residents={lcn.residents}
+                  dimension={lcn.dimension}
                 />
               </div>
             );

@@ -15,7 +15,7 @@ export const apiSlice = createApi({
 
                 const {page, search_term, location_type,dimension} = args
                 return {
-                    url:`/location?page=${page}&&name=${search_term}&&type=${location_type}&&dimension=${dimension}`
+                    url:`/location?page=${page}&name=${search_term}&type=${location_type}&dimension=${dimension}`
                    }
             }
 
