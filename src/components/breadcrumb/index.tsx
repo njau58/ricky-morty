@@ -9,7 +9,7 @@ const BreadCrumb = ({ text }: BreadCrumbProps) => {
   const router = useRouter();
 
   return (
-    <div className="fixed z-20   top-[4rem] w-screen bg-white   h-[5rem]  ">
+    <div className="fixed z-20   top-[4rem] w-screen bg-white border   h-[5rem]  ">
       <div className=" flex items-start justify-between w-full   h-[50%] my-8 px-4   md:mx-auto max-w-7xl  ">
         <div>
           <Button text="Back" onClick={() => router.back()}></Button>
