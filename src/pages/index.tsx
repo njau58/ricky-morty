@@ -7,6 +7,7 @@ import { useState } from "react";
 import { debounce } from "lodash";
 import TypeFilter from "@/components/filters/type";
 import DimensionFilter from "@/components/filters/dimension";
+import useRtkQErrors from "@/customHooks/rtkErrors";
 
 export default function Home() {
   const [page, setPage] = useState<number>(0);
@@ -20,6 +21,7 @@ export default function Home() {
     location_type: location_type,
     dimension: dimension,
   });
+  const errMsg = useRtkQErrors(!isLoading && error);
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
@@ -85,6 +87,8 @@ export default function Home() {
           </div>
         </form>
       </div>
+
+      {error && <p className="mx-auto w- text-center mt-8 text-sm">{errMsg}</p>}
 
       <div className="">
         <div className=" grid grid-flow-row gap-4    sm:grid-cols-2 px-4    lg:grid-cols-4 md:grid-cols-3   w-screen h-full  pt-16 pb-8 max-w-[85rem] mx-auto ">
