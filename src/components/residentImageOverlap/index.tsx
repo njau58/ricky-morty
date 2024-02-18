@@ -7,10 +7,10 @@ interface ResidentImageOverlapProps {
 const ResidentImageOverlap = ({ residents }: ResidentImageOverlapProps) => {
   return (
     <div className="relative flex">
-      {residents?.slice(0, 3).map((r) => {
+      {residents?.slice(0, 3).map((r, idx) => {
         return (
-          <div key={r} className=" ">
-            <ResidentImages resident_url={r}></ResidentImages>
+          <div key={r} className="relative ">
+            <ResidentImages resident_url={r} idx={idx}></ResidentImages>
           </div>
         );
       })}
