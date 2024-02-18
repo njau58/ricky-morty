@@ -6,23 +6,24 @@ import Pagination from "@/pagination";
 import { useState } from "react";
 import { debounce } from "lodash";
 import TypeFilter from "@/components/filters/type";
+import DimensionFilter from "@/components/filters/dimension";
 
 export default function Home() {
   const [page, setPage] = useState<number>(0);
   const [search_term, setSearchTerm] = useState<string>("");
   const [location_type, setLocationType] = useState<string>("");
+  const [dimension, setDimension] = useState<string>("");
 
   const { data, error, isLoading } = useGetAllLocationsQuery({
     page: page,
     search_term: search_term,
     location_type: location_type,
+    dimension: dimension,
   });
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
   };
-
-  console.log(location_type);
 
   const handleSearchDebounce = debounce(async (value) => {
     setSearchTerm(value);
@@ -34,6 +35,9 @@ export default function Home() {
 
   const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLocationType(e.target.value);
+  };
+  const handleDimensionSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setDimension(e.target.value);
   };
 
   return (
@@ -77,7 +81,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row gap-2 mx-2">
             <TypeFilter handleOnSelect={handleOnSelect} />
-            {/* <TypeFilter /> */}
+            <DimensionFilter handleOnSelect={handleDimensionSelect} />
           </div>
         </form>
       </div>

@@ -8,14 +8,14 @@ export const apiSlice = createApi({
     endpoints:(builder)=>({
 
         //get all locations
-        getAllLocations:builder.query<any, {page:number, search_term:string, location_type:string}>({
+        getAllLocations:builder.query<any, {page:number, search_term:string, location_type:string, dimension:string}>({
             query:(args)=>{
 
                 console.log(args)
 
-                const {page, search_term, location_type} = args
+                const {page, search_term, location_type,dimension} = args
                 return {
-                    url:`/location?page=${page}&&name=${search_term}&&type=${location_type}`
+                    url:`/location?page=${page}&&name=${search_term}&&type=${location_type}&&dimension=${dimension}`
                    }
             }
 
