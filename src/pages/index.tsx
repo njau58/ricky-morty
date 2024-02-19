@@ -112,7 +112,11 @@ export default function Home() {
         </div>
         <div className=" mx-auto md:grid md:col-span-4 pb-8 overflow-auto md:max-w-7xl   w-full md:place-content-end">
           {" "}
-          <Pagination pageCount={pageCount} handlePageClick={handlePageClick} />
+          <Pagination
+            pageCount={pageCount}
+            handlePageClick={handlePageClick}
+            page={page}
+          />
         </div>
       </div>
     </Layout>

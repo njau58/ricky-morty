@@ -7,20 +7,23 @@ import ReactPaginate from "react-paginate";
 interface PaginationProps {
   handlePageClick: (data: any) => void;
   pageCount: number;
+  page: number;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
   handlePageClick,
   pageCount,
+  page,
 }) => {
   return (
     <ReactPaginate
       pageRangeDisplayed={2}
+      forcePage={page === 1 ? 0 : page - 1}
       pageCount={pageCount}
       previousLabel={<MdKeyboardDoubleArrowLeft />}
       nextLabel={<MdKeyboardDoubleArrowRight />}
       breakLabel={"..."}
-      marginPagesDisplayed={2}
+      marginPagesDisplayed={0}
       onPageChange={handlePageClick}
       containerClassName={"flex items-center justify-center  flex-row gap-2"}
       pageClassName={
