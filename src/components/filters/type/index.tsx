@@ -11,6 +11,11 @@ const TypeFilter = ({ handleOnSelect }: TypeFilterProps) => {
     "Cluster",
     "TV",
     "Resort",
+    "Customs",
+    "Game",
+    "Menagerie",
+    "Fantasy Town",
+    "Microverse",
   ];
   return (
     <select
