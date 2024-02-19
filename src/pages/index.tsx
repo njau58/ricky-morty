@@ -38,11 +38,9 @@ export default function Home() {
 
   const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLocationType(e.target.value);
-    setPage(1);
   };
   const handleDimensionSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setDimension(e.target.value);
-    setPage(1);
   };
 
   return (
