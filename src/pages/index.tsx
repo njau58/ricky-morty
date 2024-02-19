@@ -22,9 +22,7 @@ export default function Home() {
     dimension: dimension,
   });
   const errMsg = useRtkQErrors(!isLoading && error);
-
-  let posts_per_page = (data?.info.count - 20 * (page - 1), 20);
-  console.log(data);
+  let pageCount = (Math.floor(data?.info.count) % 20) + 1;
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
@@ -114,10 +112,7 @@ export default function Home() {
         </div>
         <div className=" mx-auto md:grid md:col-span-4 pb-8 overflow-auto md:max-w-7xl   w-full md:place-content-end">
           {" "}
-          <Pagination
-            pageCount={data?.info.count}
-            handlePageClick={handlePageClick}
-          />
+          <Pagination pageCount={pageCount} handlePageClick={handlePageClick} />
         </div>
       </div>
     </Layout>
