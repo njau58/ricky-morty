@@ -29,6 +29,7 @@ npm install
 
 3. Set up your MongoDB& BaseURL connection in .env:
 NEXT_PUBLIC_dbURI=your uri
+
 NEXT_PUBLIC_BASE_URL=your api base url
 
 2. Start development server

@@ -6,6 +6,7 @@ import Button from "@/components/button/Button";
 import { useCreateNoteMutation } from "@/features/api/apiSlice1";
 import { useRouter } from "next/router";
 import toast from "react-hot-toast";
+import useRtkQErrors from "@/customHooks/rtkErrors";
 
 const AddNoteModal = () => {
   const { toggleModal }: any = useContext(ModalContext);
@@ -21,14 +22,7 @@ const AddNoteModal = () => {
     window.location.reload();
   }
 
-  let errorMsg = "";
-  if (error) {
-    if ("status" in error) {
-      "error" in error
-        ? (errorMsg = error.error)
-        : (errorMsg = JSON.parse(JSON.stringify(error.data)).msg);
-    }
-  }
+  let errorMsg = useRtkQErrors(error);
 
   return (
     <div className="fixed flex items-center justify-center z-50 w-screen h-screen bg-black/50 backdrop-blur-md pt-8">
