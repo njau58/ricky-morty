@@ -22,7 +22,7 @@ export default function Home() {
     dimension: dimension,
   });
   const errMsg = useRtkQErrors(!isLoading && error);
-  let pageCount = (Math.floor(data?.info.count) % 20) + 1;
+  // let pageCount = (Math.floor(data?.info.count) % 20) + 1;
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
@@ -34,6 +34,7 @@ export default function Home() {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleSearchDebounce(e.target.value);
+    setPage(data?.info.pages);
   };
 
   const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -44,6 +45,8 @@ export default function Home() {
     setDimension(e.target.value);
     setPage(0);
   };
+
+  console.log(data);
 
   return (
     <Layout>
@@ -113,9 +116,8 @@ export default function Home() {
         <div className=" mx-auto md:grid md:col-span-4 pb-8 overflow-auto md:max-w-7xl   w-full md:place-content-end">
           {" "}
           <Pagination
-            pageCount={pageCount}
+            pageCount={data?.info?.pages}
             handlePageClick={handlePageClick}
-            page={page}
           />
         </div>
       </div>
