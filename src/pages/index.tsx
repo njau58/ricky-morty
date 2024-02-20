@@ -3,7 +3,7 @@ import { CardSkeleton } from "@/components/loaders";
 import LocationCard from "@/components/locationCard";
 import { useGetAllLocationsQuery } from "@/features/api/apiSlice";
 import Pagination from "@/pagination";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { debounce } from "lodash";
 import TypeFilter from "@/components/filters/type";
 import DimensionFilter from "@/components/filters/dimension";
@@ -11,6 +11,7 @@ import useRtkQErrors from "@/customHooks/rtkErrors";
 
 export default function Home() {
   const [page, setPage] = useState<number>(0);
+
   const [search_term, setSearchTerm] = useState<string>("");
   const [location_type, setLocationType] = useState<string>("");
   const [dimension, setDimension] = useState<string>("");
@@ -21,12 +22,18 @@ export default function Home() {
     location_type: location_type,
     dimension: dimension,
   });
+  const [pageCount, setPageCount] = useState<number>(0);
   const errMsg = useRtkQErrors(!isLoading && error);
-  // let pageCount = (Math.floor(data?.info.count) % 20) + 1;
 
   const handlePageClick = (data: any) => {
     setPage(data.selected + 1);
   };
+
+  useEffect(() => {
+    setPageCount(data?.info.pages);
+  }, [pageCount, search_term, location_type, dimension, data?.info.pages]);
+
+  console.log(data?.info.pages);
 
   const handleSearchDebounce = debounce(async (value) => {
     setSearchTerm(value);
@@ -34,16 +41,16 @@ export default function Home() {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleSearchDebounce(e.target.value);
-    setPage(data?.info.pages);
+    setPageCount(data?.info.pages);
   };
 
   const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLocationType(e.target.value);
-    setPage(0);
+    setPageCount(data?.info.pages);
   };
   const handleDimensionSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setDimension(e.target.value);
-    setPage(0);
+    setPageCount(data?.info.pages);
   };
 
   console.log(data);
@@ -115,10 +122,7 @@ export default function Home() {
         </div>
         <div className=" mx-auto md:grid md:col-span-4 pb-8 overflow-auto md:max-w-7xl   w-full md:place-content-end">
           {" "}
-          <Pagination
-            pageCount={data?.info?.pages}
-            handlePageClick={handlePageClick}
-          />
+          <Pagination pageCount={pageCount} handlePageClick={handlePageClick} />
         </div>
       </div>
     </Layout>
