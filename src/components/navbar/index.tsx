@@ -2,6 +2,7 @@ import { logo } from "@/assets/images";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -16,6 +17,19 @@ const Navbar = () => {
             />{" "}
           </div>
           <h2 className="font-semibold cursor-pointer">Ricky&Morty</h2>
+        </Link>
+        <Link
+          target="_blank"
+          href="https://github.com/njau58/ricky-morty"
+          className="relative group flex flex-row items-center"
+        >
+          <div className="text-xl">
+            <FaGithub />
+          </div>
+          <div className="text-white bg-black text-xs  w-24 py-2 text-center rounded-md absolute top-8 -left-2 hidden group-hover:block">
+            View code here
+            <div className="p-2 bg-black absolute -top-1 rotate-45 left-4 "></div>
+          </div>
         </Link>
       </div>
     </nav>

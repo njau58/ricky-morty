@@ -5,7 +5,6 @@ import NoteModel from "../../Models/NotesModel";
 const sendNote = async (req: NextApiRequest, res: NextApiResponse) => {
   const { resident_id, note } = req.body;
 
-  console.log(req.body);
 
   if (!resident_id || !note) {
     return res.status(500).send({ msg: "Please fill the fields." });

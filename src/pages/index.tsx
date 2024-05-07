@@ -31,25 +31,31 @@ export default function Home() {
 
   useEffect(() => {
     setPageCount(data?.info.pages);
+    setPage(0);
   }, [pageCount, search_term, location_type, dimension, data?.info.pages]);
 
-  console.log(data?.info.pages);
+  console.log(data);
 
   const handleSearchDebounce = debounce(async (value) => {
     setSearchTerm(value);
+    setPageCount(data?.info.pages);
+    setPage(0);
   }, 500);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleSearchDebounce(e.target.value);
     setPageCount(data?.info.pages);
+    setPage(0);
   };
 
   const handleOnSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLocationType(e.target.value);
+    setPage(0);
     setPageCount(data?.info.pages);
   };
   const handleDimensionSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setDimension(e.target.value);
+    setPage(0);
     setPageCount(data?.info.pages);
   };
 

@@ -29,8 +29,6 @@ const ResidentCard = ({ resident_url }: ResidentCardProps) => {
             src={data?.image}
             width={100}
             height={100}
-            loading="lazy"
-            decoding="async"
             alt=""
             className="w-full max-h-[12.5rem] rounded-md object-cover hover:scale-125 duration-500"
           />

@@ -10,7 +10,7 @@ const ResidentImages = ({ resident_url, idx }: ResidentImageProps) => {
   const id = url.pathname.split("/").pop();
 
   const { data, error } = useGetResidentByIdQuery(id);
-
+  console.log("datass", data);
   return (
     <>
       <Image
