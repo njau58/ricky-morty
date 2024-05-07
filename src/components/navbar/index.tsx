@@ -26,9 +26,9 @@ const Navbar = () => {
           <div className="text-xl">
             <FaGithub />
           </div>
-          <div className="text-white bg-black text-xs  w-24 py-2 text-center rounded-md absolute top-8 -left-2 hidden group-hover:block">
+          <div className="text-white bg-black text-xs  w-24 py-2 text-center rounded-md absolute top-8 sm:-left-2 -left-16 hidden  group-hover:block">
             View code here
-            <div className="p-2 bg-black absolute -top-1 rotate-45 left-4 "></div>
+            <div className="p-2 bg-black absolute -top-1 rotate-45 sm:left-4  left-16"></div>
           </div>
         </Link>
       </div>
